@@ -1,0 +1,267 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>线程池 | yilyn`s blog</title>
+
+<link rel="shortcut icon" href="https://yilyn16.github.io/favicon.ico?v=1678111441237">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://yilyn16.github.io/styles/main.css">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"> -->
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages//dart.min.js"></script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script> -->
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+    
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            yilyn`s blog
+        </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="changeNavbar">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+            <div class="nav-item">
+                
+                <a href="/" class="menu gt-a-link">
+                    首页
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/archives" class="menu gt-a-link">
+                    归档
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/tags" class="menu gt-a-link">
+                    标签
+                </a>
+                
+            </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1678111441237"
+                action="/search/">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+<script>
+    /* 移动端导航栏展开/收起切换 */
+    document.getElementById('changeNavbar').onclick = () => {
+        var element = document.getElementById('navbarSupportedContent');
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else {
+            element.style.display = 'none';
+        }
+    }
+</script>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    线程池
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2023-03-05 ·
+                    </time>
+                    
+                        <a href="https://yilyn16.github.io/tag/AueY8UCY6/" class="post-tags">
+                            # 多线程
+                        </a>
+                    
+                        <a href="https://yilyn16.github.io/tag/JCZ4Cr7nv/" class="post-tags">
+                            # JAVA基础
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <h2 id="一-为什么要使用线程池">一、为什么要使用线程池</h2>
+<p>使用new Thread()创建线程，存在如下弊端：</p>
+<ol>
+<li>每new一个线程，会消耗大量资源，性能很差</li>
+<li>线程缺乏统一管理，若无限创建，会产生内存溢出等问题</li>
+<li>无法使用java提供的线程池的一些功能，如定时执行、定期执行、线程中断。</li>
+</ol>
+<!-- more -->
+<p>而使用线程池的优势：</p>
+<ol>
+<li>可以重复使用空闲的线程，减少线程创建时的资源消耗</li>
+<li>可以统一管理线程，控制线程数量，避免出现阻塞和资源竞争的情况出现</li>
+<li>提供定时执行，定期执行，线程终端等功能</li>
+</ol>
+<h2 id="二-线程池的执行过程">二、线程池的执行过程</h2>
+<p>先盗个图,这个图说明了线程池的每个参数做的事情，个人觉得很直接明了</p>
+<figure data-type="image" tabindex="1"><img src="https://yilyn16.github.io/post-images/1677978254643.jpeg" alt="" loading="lazy"></figure>
+<ol>
+<li>
+<p>Executor.excute方法执行时发生的事情</p>
+<ul>
+<li>如果正在运行的线程数量小于 corePoolSize，那么马上创建线程运行这个任务</li>
+<li>如果正在运行的线程数量大于或等于 corePoolSize，那么将这个任务放入队列；</li>
+<li>如果这时候队列满了，而且正在运行的线程数量小于 maximumPoolSize，那么还是要创建线程运行这个任务；</li>
+<li>如果队列满了，而且正在运行的线程数量大于或等于 maximumPoolSize，那么线程池会抛出异常，告诉调用者“我不能再接受任务了”。</li>
+</ul>
+</li>
+<li>
+<p>当一个线程完成任务时，它会从队列中取下一个任务来执行。</p>
+</li>
+<li>
+<p>当一个线程无事可做，超过一定的时间（keepAliveTime）时，线程池会判断，如果当前运行的线程数大于 corePoolSize，那么这个线程就被停掉。所以线程池的所有任务完成后，它最终会收缩到 corePoolSize 的大小。</p>
+</li>
+</ol>
+<h2 id="二-创建线程池的四种方法">二、创建线程池的四种方法</h2>
+<ol>
+<li>
+<p>ExecutorService executorService = Executors.newCachedThreadPool();</br><br>
+创建一个可缓存线程池，如果线程长度超过处理需要，可以灵活的回收空闲的线程，如果没有空闲的线程，才会新建线程，注意：该方法创建的是一个无限大的线程池。</p>
+</li>
+<li>
+<p>ExecutorService providerThreadPool = Executors.newFixedThreadPool(int num); </br><br>
+创建的线程池为固定大小，可以控制最大的并发数量，这种方式创建的线程，corePoolSize=num，maximumPoolSize=num，如果线程数量超出规定，超出数量的线程会排队等待。</p>
+</li>
+<li>
+<p>ScheduledExecutorService executorService = Executors.newScheduledThreadPool(2); </br><br>
+创建的线程池为固定大小，支持定时和周期性执行。</p>
+</li>
+<li>
+<p>ExecutorService executorService = Executors.newSingleThreadExecutor(); </br><br>
+该方法创建的线程池为单线程池，只有一个唯一的工作线程，用来保证所有的线程顺序执行</p>
+</li>
+</ol>
+<h2 id="三-自定义线程池threadpoolexecutor">三、自定义线程池ThreadPoolExecutor</h2>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>corePoolSize</td>
+<td>int</td>
+<td>核心池的大小，如果调用了prestartAllCoreThreads()或者prestartCoreThread()方法，会直接预先创建corePoolSize的线程，否则当有任务来之后，就会创建一个线程去执行任务，当线程池中的线程数目达到corePoolSize后，就会把到达的任务放到缓存队列当中；这样做的好处是，如果任务量很小，那么甚至就不需要缓存任务，corePoolSize的线程就可以应对</td>
+</tr>
+<tr>
+<td>maximumPoolSize</td>
+<td>int</td>
+<td>线程池最大线程数，表示在线程池中最多能创建多少个线程，如果运行中的线程超过了这个数字，那么相当于线程池已满，新来的任务会使用RejectedExecutionHandler 进行处理</td>
+</tr>
+<tr>
+<td>keepAliveTime</td>
+<td>long</td>
+<td>表示线程没有任务执行时最多保持多久时间会终止，然后线程池的数目维持在corePoolSize 大小</td>
+</tr>
+<tr>
+<td>unit</td>
+<td>TimeUnit</td>
+<td>参数keepAliveTime的时间单位</td>
+</tr>
+<tr>
+<td>workQueue</td>
+<td>BlockingQueue<Runnable></td>
+<td>一个阻塞队列，用来存储等待执行的任务，如果当前对线程的需求超过了corePoolSize大小，才会放在这里</td>
+</tr>
+<tr>
+<td>threadFactory</td>
+<td>ThreadFactory</td>
+<td>线程工厂，主要用来创建线程，比如可以指定线程的名字</td>
+</tr>
+<tr>
+<td>handler</td>
+<td>RejectedExecutionHandler</td>
+<td>如果线程池已满，新的任务的处理方式</td>
+</tr>
+</tbody>
+</table>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://yilyn16.github.io/post/spring-shi-wu-bu-sheng-xiao-de-chang-jing/" class="post-title gt-a-link">
+                    Spring事务不生效的场景
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">yilyn的技术债</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme <a href="https://github.com/imhanjie/gridea-theme-pure" target="_blank">Pure</a>, Powered by <a
+                href="https://gridea.dev" target="_blank">Gridea</a> | <a href="https://yilyn16.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+</div>
+
+<script>
+  hljs.highlightAll()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

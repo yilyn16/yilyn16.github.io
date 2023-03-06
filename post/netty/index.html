@@ -1,0 +1,420 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Netty | yilyn`s blog</title>
+
+<link rel="shortcut icon" href="https://yilyn16.github.io/favicon.ico?v=1678111441237">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://yilyn16.github.io/styles/main.css">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"> -->
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages//dart.min.js"></script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script> -->
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+    
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            yilyn`s blog
+        </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="changeNavbar">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+            <div class="nav-item">
+                
+                <a href="/" class="menu gt-a-link">
+                    首页
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/archives" class="menu gt-a-link">
+                    归档
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/tags" class="menu gt-a-link">
+                    标签
+                </a>
+                
+            </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1678111441237"
+                action="/search/">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+<script>
+    /* 移动端导航栏展开/收起切换 */
+    document.getElementById('changeNavbar').onclick = () => {
+        var element = document.getElementById('navbarSupportedContent');
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else {
+            element.style.display = 'none';
+        }
+    }
+</script>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    Netty
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2023-03-06 ·
+                    </time>
+                    
+                </div>
+                <div class="post-content">
+                    <p>Netty 是一个利用 Java 的高级网络的能力，隐藏其背后的复杂性而提供一个易于使用的 API 的客户端/服务器框架。Netty 提供高性能和可扩展性，让你可以自由地专注于你真正感兴趣的东西，你的独特的应用！</p>
+<!-- more -->
+<p>参考书籍：<br>
+<a href='https://www.bookstack.cn/read/essential-netty-in-action/SUMMARY.md'>Netty实战</a ></p>
+<h2 id="netty的组成">Netty的组成</h2>
+<h3 id="channel">Channel</h3>
+<p>Channel 是 NIO 基本的结构。它代表了一个用于连接到实体如硬件设备、文件、网络套接字或程序组件,能够执行一个或多个不同的 I/O 操作（例如读或写）的开放连接。</p>
+<h3 id="callback-回调">Callback (回调)</h3>
+<p>callback (回调)是一个简单的方法,提供给另一种方法作为引用,这样后者就可以在某个合适的时间调用前者。这种技术被广泛使用在各种编程的情况下,最常见的方法之一通知给其他人操作已完成。</p>
+<p>Netty 内部使用回调处理事件时。一旦这样的回调被触发，事件可以由接口 ChannelHandler 的实现来处理。如下面的代码，一旦一个新的连接建立了,调用 channelActive(),并将打印一条消息。</p>
+<h3 id="future">Future</h3>
+<p>Future 提供了另外一种通知应用操作已经完成的方式。这个对象作为一个异步操作结果的占位符,它将在将来的某个时候完成并提供结果。</p>
+<h3 id="event-和-handler">Event 和 Handler</h3>
+<p>Netty 使用不同的事件来通知我们更改的状态或操作的状态。这使我们能够根据发生的事件触发适当的行为。</p>
+<h3 id="future-callback-和-handler">FUTURE, CALLBACK 和 HANDLER</h3>
+<p>Netty 的异步编程模型是建立在 future 和 callback 的概念上的。所有这些元素的协同为自己的设计提供了强大的力量。</p>
+<p>拦截操作和转换入站或出站数据只需要您提供回调或利用 future 操作返回的。这使得链操作简单、高效,促进编写可重用的、通用的代码。一个 Netty 的设计的主要目标是促进“关注点分离”:你的业务逻辑从网络基础设施应用程序中分离。</p>
+<h3 id="selector-event-和-event-loop">SELECTOR, EVENT 和 EVENT LOOP</h3>
+<p>Netty 通过触发事件从应用程序中抽象出 Selector，从而避免手写调度代码。EventLoop 分配给每个 Channel 来处理所有的事件，包括</p>
+<ul>
+<li>注册感兴趣的事件</li>
+<li>调度事件到 ChannelHandler</li>
+<li>安排进一步行动</li>
+</ul>
+<p>该 EventLoop 本身是由只有一个线程驱动，它给一个 Channel 处理所有的 I/O 事件，并且在 EventLoop 的生命周期内不会改变。这个简单而强大的线程模型消除你可能对你的 ChannelHandler 同步的任何关注，这样你就可以专注于提供正确的回调逻辑来执行。该 API 是简单和紧凑。</p>
+<h2 id="一个基于netty的简单demo">一个基于netty的简单demo</h2>
+<h4 id="server端">server端</h4>
+<ol>
+<li>基于maven新建服务端应用，命名为lyn-netty-server，分别创建EchoServerHandler和EchoServer</li>
+</ol>
+<p>maven依赖</p>
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;io.netty&lt;/groupId&gt;
+    &lt;artifactId&gt;netty-all&lt;/artifactId&gt;
+    &lt;version&gt;4.1.45.Final&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<pre><code class="language-java">package com.lyn.nt.server;
+
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.Unpooled;
+import io.netty.channel.ChannelFutureListener;
+import io.netty.channel.ChannelHandler;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
+import io.netty.util.CharsetUtil;
+
+/**
+ * 用于接收客户端请求的处理
+ */
+@ChannelHandler.Sharable
+public class EchoServerHandler extends ChannelInboundHandlerAdapter {
+
+    /**
+     * 当服务端收到请求时，会调用此方法
+     * @param ctx
+     * @param msg
+     * @throws Exception
+     */
+    @Override
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+        ByteBuf in = (ByteBuf) msg;
+        System.out.println(&quot;Server received: &quot; + in.toString(CharsetUtil.UTF_8));
+        ctx.write(in);
+    }
+
+    @Override
+    public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
+        ctx.writeAndFlush(Unpooled.EMPTY_BUFFER)
+                .addListener(ChannelFutureListener.CLOSE);
+    }
+
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        cause.printStackTrace();
+        ctx.close();
+    }
+}
+</code></pre>
+<pre><code class="language-java">package com.lyn.nt.server;
+
+import io.netty.bootstrap.ServerBootstrap;
+import io.netty.channel.ChannelFuture;
+import io.netty.channel.ChannelInitializer;
+import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.channel.socket.SocketChannel;
+import io.netty.channel.socket.nio.NioServerSocketChannel;
+
+import java.net.InetSocketAddress;
+
+/**
+ * server服务发布入口
+ */
+public class EchoServer {
+
+    private final int port;
+    private final String host;
+
+    public EchoServer(String host, int port) {
+        this.host = host;
+        this.port = port;
+    }
+
+    public static void main(String[] args) throws Exception {
+        String host = &quot;127.0.0.1&quot;;
+        int port = 9999;
+        new EchoServer(host, port).start();
+    }
+
+    public void start() throws Exception {
+        NioEventLoopGroup group = new NioEventLoopGroup();
+        try {
+            ServerBootstrap b = new ServerBootstrap();
+            b.group(group)
+                    .channel(NioServerSocketChannel.class)
+                    .localAddress(new InetSocketAddress(host, port))
+                    .childHandler(new ChannelInitializer&lt;SocketChannel&gt;() {
+                        @Override
+                        public void initChannel(SocketChannel ch)
+                                throws Exception {
+                            ch.pipeline().addLast(new EchoServerHandler());
+                        }
+                    });
+            ChannelFuture f = b.bind().sync();
+            System.out.println(EchoServer.class.getName() + &quot; started and listen on &quot; + f.channel().localAddress());
+            f.channel().closeFuture().sync();
+        } finally {
+            group.shutdownGracefully().sync();
+        }
+    }
+
+}
+</code></pre>
+<ol start="2">
+<li>基于maven新建客户端应用，明明为lyn-netty-client，分别创建EchoClientHandler和EchoClient</li>
+</ol>
+<pre><code class="language-java">package com.lyn.nt.client;
+
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.Unpooled;
+import io.netty.channel.ChannelHandler;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.SimpleChannelInboundHandler;
+import io.netty.util.CharsetUtil;
+
+/**
+ * 客户端发送请求时的处理
+ */
+@ChannelHandler.Sharable
+public class EchoClientHandler extends SimpleChannelInboundHandler&lt;ByteBuf&gt; {
+
+    private String msg;
+
+    public EchoClientHandler(String msg) {
+        super();
+        this.msg = msg;
+    }
+
+    /**
+     * 服务器的连接被建立后调用
+     * @param ctx
+     * @throws Exception
+     */
+    @Override
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        ctx.writeAndFlush(Unpooled.copiedBuffer(msg, //2
+                CharsetUtil.UTF_8));
+    }
+
+    /**
+     * 数据从服务器接收到后调用
+     * @param channelHandlerContext
+     * @param byteBuf
+     * @throws Exception
+     */
+    @Override
+    protected void channelRead0(ChannelHandlerContext channelHandlerContext, ByteBuf byteBuf) throws Exception {
+        System.out.println(&quot;Client received: &quot; + byteBuf.toString(CharsetUtil.UTF_8));
+    }
+
+    /**
+     *  捕获一个异常时调用
+     * @param ctx
+     * @param cause
+     * @throws Exception
+     */
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        cause.printStackTrace();
+        ctx.close();
+    }
+}
+</code></pre>
+<pre><code class="language-java">package com.lyn.nt.client;
+
+import io.netty.bootstrap.Bootstrap;
+import io.netty.channel.ChannelFuture;
+import io.netty.channel.ChannelInitializer;
+import io.netty.channel.EventLoopGroup;
+import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.channel.socket.SocketChannel;
+import io.netty.channel.socket.nio.NioSocketChannel;
+
+import java.net.InetSocketAddress;
+
+public class EchoClient {
+
+    private final String host;
+    private final int port;
+    public EchoClient(String host, int port) {
+        this.host = host;
+        this.port = port;
+    }
+
+    /**
+     * 客户端调用入口
+     * @param s
+     * @throws Exception
+     */
+    public void start(String s) throws Exception {
+        EventLoopGroup group = new NioEventLoopGroup();
+        try {
+            Bootstrap b = new Bootstrap();                //1
+            b.group(group)                                //2
+                    .channel(NioSocketChannel.class)            //3
+                    .remoteAddress(new InetSocketAddress(host, port))    //4
+                    .handler(new ChannelInitializer&lt;SocketChannel&gt;() {    //5
+                        @Override
+                        public void initChannel(SocketChannel ch)
+                                throws Exception {
+                            EchoClientHandler echoClientHandler = new EchoClientHandler(s);
+                            ch.pipeline().addLast(echoClientHandler);
+                        }
+                    });
+            ChannelFuture f = b.connect().sync();        //6
+            f.channel().closeFuture().sync();            //7
+        } finally {
+            group.shutdownGracefully().sync();            //8
+        }
+    }
+    public static void main(String[] args) throws Exception {
+        final String host = &quot;127.0.0.1&quot;;
+        final int port = 9999;
+        EchoClient echoClient = new EchoClient(host, port);
+        while (true) {
+            double random = Math.random();
+            echoClient.start(String.valueOf(random));
+            Thread.sleep(300L);
+        }
+    }
+
+}
+</code></pre>
+<ol start="3">
+<li>运行
+<ol>
+<li>运行lyn-netty-server中EchoServer.main()，以启动服务端</li>
+<li>运行lyn-netty-client中EchoClient.main()，启动后，客户端会将数据发送至服务端。</li>
+</ol>
+</li>
+</ol>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://yilyn16.github.io/post/2023-mian-shi-wen-ti-ji-lu/" class="post-title gt-a-link">
+                    2023面试问题记录
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">yilyn的技术债</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme <a href="https://github.com/imhanjie/gridea-theme-pure" target="_blank">Pure</a>, Powered by <a
+                href="https://gridea.dev" target="_blank">Gridea</a> | <a href="https://yilyn16.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+</div>
+
+<script>
+  hljs.highlightAll()
+</script>
+
+    </div>
+</div>
+</body>
+</html>
