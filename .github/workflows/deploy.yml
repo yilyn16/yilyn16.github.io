@@ -1,0 +1,46 @@
+# ci脚本的名称
+name: YILYN-BLOG-DEPLOY-CI
+# 触发的时机
+on:
+  # 在push阶段触发
+  push:
+    # 对应的分支
+    branches: [ master ]
+  # 在PR阶段触发
+  pull_request:
+    # 对应的分支
+    branches: [ master ]
+# 执行的任务
+jobs:
+  # 任务名称
+  build:
+    # 执行的环境，默认是在最新版本的Ubuntu系统
+    runs-on: ubuntu-latest
+    # 执行的步骤
+    steps:
+      # checkout代码
+      # 其中actions是github官方账号，checkout是改账号下提供的库，可以直接拿来使用，对应的版本是v2
+      # setup-node同上
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        # 设置node的版本
+        with:
+          node-version: '16'
+        # 执行步骤的名称
+      - name: Compiling start
+        # 执行的具体脚本
+        run: echo Compiling start!
+        # 如果在执行的时候报错，提示需要用户名跟邮箱，那么需要单独设置下邮箱跟用户名
+      - run: git config --global user.email "lyn00009@163.com"
+      - run: git config --global user.name "yilyn16"
+        # 执行安装跟打包命令
+      - run: npm install && npm run build
+      - name: Deploy
+        # 这个是第三方提供的库，可以推送打包后的内容到指定分支
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          # 部署到 gh-pages 分支
+          BRANCH: gh-pages
+          # 部署目录为 VuePress 的默认输出目录，这里需要根据项目的目录进行修改
+          FOLDER: docs/.vuepress/dist
