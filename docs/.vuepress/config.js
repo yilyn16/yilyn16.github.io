@@ -106,7 +106,7 @@ module.exports = {
                         {
                             title: 'MySQL',
                             collapsable: true,
-                            path: '/databases/mysql/',
+                            // path: '/databases/mysql/',
                             children: [
                                 '/databases/mysql/事物隔离级别',
                             ]
