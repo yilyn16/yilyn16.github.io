@@ -17,6 +17,6 @@ git add -A
 git commit -m 'deploy'
 
 # 发布到github
-git push -f git@github.com:yilyn16/yilyn16.git
+git push -f git@github.com:yilyn16/yilyn16.github.io.git
 
-# cd -
+cd -
