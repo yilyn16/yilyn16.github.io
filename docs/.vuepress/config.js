@@ -3,7 +3,7 @@ module.exports = {
     head: [
         ['link', { rel: 'icon', href: '/images/logo.png' }], 
     ],
-    base: '/',
+    base: '',
     markdown: {
         toc: { includeLevel: [1, 2, 3] },
         lineNumbers: true,
