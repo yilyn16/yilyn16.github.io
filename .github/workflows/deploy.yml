@@ -37,10 +37,11 @@ jobs:
       - run: npm install && npm run build
       - name: Deploy
         # 这个是第三方提供的库，可以推送打包后的内容到指定分支
-        uses: peaceiris/actions-gh-pages@v3
+        uses: avinal/github-pages-deploy-action@v0.9
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          # 当前仓库的密钥
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           # 部署到 gh-pages 分支
-          BRANCH: gh-pages
-          # 部署目录为 VuePress 的默认输出目录，这里需要根据项目的目录进行修改
-          FOLDER: docs/.vuepress/dist
+          PAGES_BRANCH: gh-pages
+          # 部署目录为 VuePress 的默认输出目录
+          DOCS_FOLDER: docs/.vuepress/dist
