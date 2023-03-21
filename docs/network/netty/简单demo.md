@@ -1,6 +1,8 @@
 # 基于netty的简单demo
 
-## 1. 基于maven新建服务端应用，命名为lyn-netty-server，分别创建EchoServerHandler和EchoServer
+## 1. 服务端
+
+基于maven新建服务端应用，命名为lyn-netty-server，分别创建EchoServerHandler和EchoServer
 
 maven依赖
 ```xml
@@ -111,7 +113,9 @@ public class EchoServer {
 }
 ```
 
-### 2. 基于maven新建客户端应用，命名为lyn-netty-client，分别创建EchoClientHandler和EchoClient
+### 2. 客户端
+
+基于maven新建客户端应用，命名为lyn-netty-client，分别创建EchoClientHandler和EchoClient
 
 ```java
 package com.lyn.nt.client;
