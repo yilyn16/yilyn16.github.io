@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="877c9c5c-be57-4bb7-ae73-8fe5ef73da7d" name="Default Changelist" comment="deploy">
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/images/interview/java对象布局.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/take_notes/interview/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/take_notes/interview/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="877c9c5c-be57-4bb7-ae73-8fe5ef73da7d" name="Default Changelist" comment="deploy" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679227094727</updated>
-      <workItem from="1679227096228" duration="4765000" />
+      <workItem from="1679227096228" duration="5228000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1679227752522</created>
