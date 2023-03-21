@@ -150,3 +150,55 @@ synchronized在jdk1.5的时候性能比较差，在jdk1.6对其做了优化，�
 ### Thread真正开启新线程是调用start方法还是run方法？
 1. start方法是Thread类中的方法，用于启动新的线程
 2. run方法不会开启线程，而是在start开启新线程之后在这个线程中同步执行的方法。
+
+### Object o = new Object() 占用多少字节
+1. 一个对象由**对象头**、**实例数据**和**对齐填充**组成；
+2. 对象头：又分为`Mark Word`和`对象指针`，如果是数组对象，对象头中还包含`length`存储数组长度；Mark Word占用8个字节；对象指针分为两种情况，一种是未被压缩的情况下，占用8字节；一种是被压缩，占用4个字节；
+3. 实例数据：用来存储对象实例的真正数据，new Object()完成后，实例数据没有存储任何信息，所以占用0字节；
+4. 对齐填充：如果对象大小没有达到8字节的整数倍，在对齐填充区域会自动补齐到8的整数倍；**所以这个问题的答案是16字节**。
+
+> **对象指针压缩**是为了在64位平台中使用32位指针，导致内存被浪费时使用的。通过JVM命令启用指针压缩:-XX:+UseCompressedOops，禁止指针压缩:-XX:-UseCompressedOops
+
+![java对象布局](/images/interview/java对象布局.jpeg)
+
+### select ... for update 是表锁还是行锁
+1. 如果select带有查询条件，且查询条件走了索引，则是行锁；但如果是索引失效的场景下，仍然是表锁；
+2. 如果select不带where查询条件或者查询条件不是索引，那么这个sql使用的是表锁
+3. 如果where条件使用某个带索引的字段范围查询，则使用的是间隙锁，这时所定的是查询范围之间的数据。
+
+### JVM有哪些垃圾回收器
+
+**并行/并发类型**
+1. 串行：Serial、 Serial Old
+2. 并行回收器：ParNew、Parallel scavenge、 Parallel Old
+3. 并发收集器：CMS、 G1
+
+**根据分代类型**
+1. 新生代： Serial、 ParNew、 Parallel scavenge
+2. 老年代：Serial Old、 Parallel Old
+3. 混合（整堆收集）： G1
+
+### volatile如何保证可见性
+1. CPU和内存是两个独立的硬件，是通过中间的**总线**来进行数据交互的，volatile会开启总线的**mesi缓存一致性协议**
+2. mesi缓存一致性协议就是当某个共享数据出现修改时，这个数据会立刻同步到主内存中，其他CPU通过总线嗅探机制可以感知到数据的变化，从将自己工作内存中的这个数据进行失效处理，再将最新的数据从主内存中同步到自己的工作线程中。
+
+### 线程池执行流程
+1. 如果线程数小于核心线程数，则通过addWorker添加一个核心工作线程；否则进入第2步
+2. 如果阻塞队列还没有满，则将该任务放到阻塞队列中等待执行；
+   1）此时会再次检查线程池状态如果不是RUNNING，会从队列中删除这个任务，然后执行拒绝策略；
+   2）如果是RUNNING状态，那么会判断当前线程池数如果为0，则通过addWorker添加一个非核心线程
+3. 如果线程池为非RUNNING状态，或者添加阻塞队列失败，则执行拒绝策略。
+
+### ConcurrentHashMap 的原理
+ConcurrentHashMap在JDK1.7和JDK1.8以后的差别比较大
+
+**JDK1.7版本的ConcurrentHashMap：**
+1. 基于Segment数组+Entry数组+链表实现；
+2. Segment数组是16位的固定长度，每个Segment存放的是Entry数组，Entry存放链表数据，ConcurrentHashMap的数据就存放在链表中；
+2. Segment继承自ReentrantLock，当多个线程并发操作时，会对Segment进行加锁操作，从而实现Segment下所有数据的数据安全。
+
+**JDK1.8版本的ConcurrentHashMap：**
+1. 与HashMap结构相同，基于Node数组+链表/红黑树实现，是通过CAS和synchronized实现线程安全的
+2. 在put数据时，根据key的hash判断Node数组下标，当前下标元素为空时（即链表头节点为空），通过CAS方式对头节点赋值；
+3. 如果此时头节点已存在，则用synchronized锁定头节点，然后在当前链表中进行数据的增加；
+4，当链表数量大于8时，链表的结构会自动转换成红黑树的结构。
