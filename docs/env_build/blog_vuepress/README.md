@@ -266,3 +266,6 @@ git push -f 你的github地址
     "deploy": "bash deploy.sh"
 },
 ```
+
+8. 执行完成后，可以在git仓库的Action菜单下查看部署结果，如果失败了点击进去可以看到对应的错误信息
+   ![部署设置](/images/vuepress-blog/部署action.png)
