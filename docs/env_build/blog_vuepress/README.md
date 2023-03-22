@@ -27,11 +27,11 @@ npm init -y
 
 5. 在package.json中添加构建和启动脚本
 
-```
+```json
 {
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
   }
 }
 ```

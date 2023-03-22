@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="877c9c5c-be57-4bb7-ae73-8fe5ef73da7d" name="Default Changelist" comment="deploy" />
+    <list default="true" id="877c9c5c-be57-4bb7-ae73-8fe5ef73da7d" name="Default Changelist" comment="deploy">
+      <change beforePath="$PROJECT_DIR$/docs/env_build/blog_vuepress/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/env_build/blog_vuepress/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +29,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/.vuepress/public/images/interview" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/.vuepress/public/images/vuepress-blog" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -72,7 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679227094727</updated>
       <workItem from="1679227096228" duration="5601000" />
-      <workItem from="1679491347043" duration="2650000" />
+      <workItem from="1679491347043" duration="2905000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1679227752522</created>
