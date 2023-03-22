@@ -5,7 +5,7 @@ module.exports = {
     ],
     base: '',
     markdown: {
-        toc: { includeLevel: [1, 2, 3] },
+        toc: { includeLevel: [1, 2, 3] }, //使用[[toc]]生成页面顶部目录
         lineNumbers: true,
     },
     plugins: [

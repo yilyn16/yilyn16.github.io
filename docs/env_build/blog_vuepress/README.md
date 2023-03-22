@@ -71,10 +71,54 @@ npm run dev
 
 该文件为vuepress的核心配置文件
 
-```
+```js
 module.exports = {
-  title: '网站标题',
-  description: '描述'
+    title: "yilyn",
+    head: [
+        ['link', { rel: 'icon', href: '/images/logo.png' }],
+    ],
+    base: '',
+    markdown: {
+        toc: { includeLevel: [1, 2, 3] }, //使用[[toc]]生成页面顶部目录
+        lineNumbers: true,
+    },
+    plugins: [
+        ['@vuepress/plugin-medium-zoom'], //图片放大插件
+        ['@vuepress/back-to-top'], //回到顶部插件
+        ['@vuepress/plugin-toc'], //顶部的目录插件
+        [
+            'vuepress-plugin-right-anchor', // 右侧的目录插件
+            {
+                showDepth: 2,
+                ignore: [
+                    '/',
+                ],
+                expand: {
+                    trigger: 'click', //点击才能显示/关闭； click/hover
+                    clickModeDefaultOpen: true //click模式默认展开
+                },
+            }
+        ],
+    ],
+    themeConfig: {
+        logo: '/images/logo.png',
+        search: false,
+        // lastUpdated: 'Last Updated', // string | boolean
+        // displayAllHeaders: true, // 默认值：false
+        collapsable: false,
+        nav: [
+            { text: '首页', link: '/' },
+            { text: 'JAVA基础', items:[
+                { text: '集合类', link: '/java_basics/collections/'},
+                { text: '多线程', link: '/java_basics/multi_threads/'},
+                { text: 'JUC', link: '/java_basics/JUC/'},
+            ]},
+        ],
+        sidebarDepth: 2, // 侧边栏显示等级
+        sidebar: {//侧边栏的导航
+            
+        }
+    }
 }
 ```
 
@@ -124,32 +168,70 @@ npm install -D @vuepress/plugin-toc
 npm install -D vuepress-plugin-right-anchor
 ```
 
-## 部署到gitee
+## 使用github action实现自动部署
 
-1. 登录到gitee后新建仓库，这里名字最好喝自己的空间名称保持一致，那样的话就可以通过[空间地址.http://gitee.io]的形式访问
+1. 登录到github后新建仓库，这里名字最使用[用户名.gothub.io]，这样的话部署完成可以直接访问[用户名.gothub.io]就能进入首页
 
-![新建仓库.png](/images/vuepress-blog/新建仓库.png)
+2. 创建成功后，在本地vuepress的项目根目录下，创建`.github/workflows/deploy.yml`文件,文件配置如下：
 
-2. 创建成功后，在vuepress的项目根目录下，初始化git仓库并提交代码到代码库
-
-```sh
-git init
-
-git add -A
-
-git commit -m "我的博客，第一次提交"
-
-git remote add origin git@gitee.com:yilyn16/yilyn16.git
-
-# 这里使用ssh方式，需要先生成公钥才能提交
-git push -u origin master
+```shell
+# ci脚本的名称
+name: YILYN-BLOG-DEPLOY-CI
+# 触发的时机
+on:
+  # 在push阶段触发
+  push:
+    # 对应的分支
+    branches: [ master ]
+  # 在PR阶段触发
+  pull_request:
+    # 对应的分支
+    branches: [ master ]
+# 执行的任务
+jobs:
+  # 任务名称
+  build:
+    # 执行的环境，默认是在最新版本的Ubuntu系统
+    runs-on: ubuntu-latest
+    # 执行的步骤
+    steps:
+      # checkout代码
+      # 其中actions是github官方账号，checkout是改账号下提供的库，可以直接拿来使用，对应的版本是v2
+      # setup-node同上
+      - uses: actions/checkout@v3  # 这里需要注意一下版本，需要和node版本对应上，否则会部署失败
+      - uses: actions/setup-node@v3 # 也是版本问题
+        # 设置node的版本
+        with:
+          node-version: '16' 
+        # 执行步骤的名称
+      - name: Compiling start
+        # 执行的具体脚本
+        run: echo Compiling start!
+        # 如果在执行的时候报错，提示需要用户名跟邮箱，那么需要单独设置下邮箱跟用户名
+      - run: git config --global user.email "xxx" # 设置自己的邮箱
+      - run: git config --global user.name "xxx" # 设置自己的用户名
+        # 执行安装跟打包命令
+      - run: npm install && npm run build
+      - name: Deploy
+        # 这个是第三方提供的库，可以推送打包后的内容到指定分支
+        uses: avinal/github-pages-deploy-action@v0.9
+        with:
+          # 当前仓库的密钥
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}  # 这个TOKEN是在个人中心下申请的TOKEN，将TOKEN设置到Action密钥中
+          # 部署到 gh-pages 分支
+          PAGES_BRANCH: gh-pages # 这个分支用来存放静态文件，master分支用来存放源码
+          # 部署目录为 VuePress 的默认输出目录
+          DOCS_FOLDER: docs/.vuepress/dist
 ```
+   
+3. 初始化git仓库并提交代码到代码库
 
-3. 打开[服务]菜单，选择[Gitee Pages]，修改部署目录：`docs/.vuepress/dist`，点击[启动]/[更新]，稍等片刻即可访问
+4. 在代码库的Settings下，设置GitHub Pages的分支和目录，如图：
+![部署设置](/images/vuepress-blog/deploy.png)
 
-![部署目录](/images/vuepress-blog/部署giteePages.png)
-
-4. deploy.sh 脚本实现自动提交
+5. 过一会就能通过https://用户名.github.io/ 访问你的博客了。
+   
+6. deploy.sh 脚本实现自动提交和自动部署，可以把执行脚本的命令放在`package.json`中，通过npm方式执行
 
 ```sh
 #!/usr/bin/env sh
@@ -164,22 +246,23 @@ npm run build
 # 如果执行下面这一行，那么在更新部署的时候部署目录不需要单独设置，只上传dist文件夹下静态文件。
 # cd docs/.vuepress/dist
 
-# 如果是发布到自定义域名
+# 如果是发布到自定义域名，现在还不支持
 # echo 'www.example.com' > CNAME
 
 git init
 git add -A
 git commit -m 'deploy'
 
-# 发布到gitee，gitee不支持自动部署，需要在Gitee Pages上手动更新才能生效
-git push -f git@gitee.com:yilyn16/yilyn16.git
+# 发布到github，使用ssh方式
+git push -f 你的github地址
 
-cd -
 ```
 
-终端运行如下命令即可提交到gitee：
-```sh
-sh ./deploy.sh
+7. 执行deploy.sh ，可以吧部署命令放在`package.json`中，通过npm run deploy命令访问
+```shell
+"scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+},
 ```
-
-Gitee Pages不支持提交后自动部署，后面有时间会研究部署到Github Action实现自动部署
