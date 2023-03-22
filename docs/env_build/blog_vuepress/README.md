@@ -13,13 +13,13 @@ vuepress是vuejs官方提供的以Vue为驱动的静态网站生成工具。
 1. 新建目录，并在vsCode中打开
 2. 进入文件夹，安装本地依赖
 
-```
+```shell
 npm install -D vuepress
 ```
 
 3. 初始化项目，生成package.json
 
-```
+```shell
 npm init -y
 ```
 
@@ -149,22 +149,22 @@ plugins: [
 ```
 
 1. 图片放大插件
-```
+```shell
 npm install -D @vuepress/plugin-medium-zoom
 ```
 
 2. 回到顶部插件
-```
+```shell
 npm install -D @vuepress/back-to-top
-```
+```shell
 
 3. 顶部目录插件
-```
+```shell
 npm install -D @vuepress/plugin-toc
-```
+```shell
 
 4. 右边的目录插件
-```
+```shell
 npm install -D vuepress-plugin-right-anchor
 ```
 
