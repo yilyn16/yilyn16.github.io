@@ -73,7 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679227094727</updated>
       <workItem from="1679227096228" duration="5601000" />
-      <workItem from="1679491347043" duration="4605000" />
+      <workItem from="1679491347043" duration="4909000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1679227752522</created>
@@ -132,5 +132,9 @@
     <MESSAGE value="commit" />
     <MESSAGE value="deploy" />
     <option name="LAST_COMMIT_MESSAGE" value="deploy" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
