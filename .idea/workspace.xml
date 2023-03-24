@@ -1,61 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="877c9c5c-be57-4bb7-ae73-8fe5ef73da7d" name="Default Changelist" comment="deploy">
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/css/0.styles.9eb234e9.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/10.a57b8461.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/11.9ae80b27.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/12.6fb4ca39.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/13.80dc936c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/14.4591c30d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/15.c826a932.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/16.bdb9c476.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/17.2054c2d5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/19.4e36e40e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/21.9664e02b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/22.eab6d26f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/24.a4fc76d5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/25.85f5a967.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/26.14f4d35a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/30.0a9d4411.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/31.8cf90434.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/7.bf7085c0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/8.80c08002.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/9.621e63fd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/app.1265fd8d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/big_data/flink-cdc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/big_data/flink-cdc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/big_data/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/big_data/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/databases/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/databases/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/databases/mysql/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/databases/mysql/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/databases/mysql/事物隔离级别.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/databases/mysql/事物隔离级别.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/databases/redis/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/databases/redis/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/env_build/blog_vuepress/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/env_build/blog_vuepress/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/env_build/docker/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/env_build/docker/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/env_build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/env_build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/JUC/AQS.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/JUC/AQS.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/JUC/ReentrantLock.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/JUC/ReentrantLock.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/JUC/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/JUC/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/collections/Collection-List.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/collections/Collection-List.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/collections/Map.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/collections/Map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/collections/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/collections/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/jvm/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/jvm/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/multi_threads/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/multi_threads/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/multi_threads/线程池.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/multi_threads/线程池.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/network/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/network/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/network/netty/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/network/netty/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/network/netty/简单demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/network/netty/简单demo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/spring/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/spring/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/take_notes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/take_notes/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/take_notes/interview/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/take_notes/interview/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/styles/palette.styl" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/styles/palette.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/databases/mysql/事物隔离级别.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/databases/mysql/事物隔离级别.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/.temp/app-enhancers/global-components-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/.temp/app-enhancers/global-components-1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/.temp/internal/page-components.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/.temp/internal/page-components.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/.temp/internal/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/.temp/internal/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/.temp/internal/siteData.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/.temp/internal/siteData.js" afterDir="false" />
-    </list>
+    <list default="true" id="877c9c5c-be57-4bb7-ae73-8fe5ef73da7d" name="Default Changelist" comment="deploy" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +34,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -127,7 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679227094727</updated>
       <workItem from="1679227096228" duration="5601000" />
-      <workItem from="1679491347043" duration="4207000" />
+      <workItem from="1679491347043" duration="4605000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1679227752522</created>
