@@ -38,6 +38,7 @@ module.exports = {
                 { text: '集合类', link: '/java_basics/collections/'},
                 { text: '多线程', link: '/java_basics/multi_threads/'},
                 { text: 'JUC', link: '/java_basics/JUC/'},
+                { text: 'JVM', link: '/java_basics/jvm/'},
             ]},
             { text: '网络', items:[
                 { text: 'netty', link: '/network/netty/' },
@@ -57,12 +58,12 @@ module.exports = {
                 { text: '面试', link: '/take_notes/interview/' },
             ]},
         ],
-        sidebarDepth: 2, // 侧边栏显示等级
+        sidebarDepth: 0, // 侧边栏显示等级
         sidebar: {
             '/java_basics/':[
                 {
                     title: 'Java基础',
-                    collapsable: false,
+                    collapsable: true,
                     children: [
                         {
                             title: '集合',
@@ -106,7 +107,7 @@ module.exports = {
                         {
                             title: 'MySQL',
                             collapsable: true,
-                            // path: '/databases/mysql/',
+                            path: '/databases/mysql/',
                             children: [
                                 '/databases/mysql/事物隔离级别',
                             ]
@@ -115,9 +116,6 @@ module.exports = {
                             title: 'Redis',
                             collapsable: true,
                             path: '/databases/redis/',
-                            // children: [
-                            //     '/databases/mysql/事物隔离级别',
-                            // ]
                         },
                     ]
                 }
@@ -166,7 +164,15 @@ module.exports = {
                         {
                             title: 'docker',
                             collapsable: true,
-                            path: '/env_build/docker/'
+                            path: '/env_build/docker/',
+                            children: [
+                                {
+                                    title: 'docker搭建ES集群',
+                                    collapsable: true,
+                                    path: '/env_build/docker/Docker搭建ES集群',
+                                }
+
+                            ]
                         }
                     ]
                 }
