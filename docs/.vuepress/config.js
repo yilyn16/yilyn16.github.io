@@ -21,7 +21,7 @@ module.exports = {
                 ],
                 expand: {
                     trigger: 'click', //点击才能显示/关闭； click/hover
-                    clickModeDefaultOpen: true //click模式默认展开
+                    clickModeDefaultOpen: false //click模式默认展开
                 },
             }
         ],
@@ -109,7 +109,8 @@ module.exports = {
                             collapsable: true,
                             path: '/databases/mysql/',
                             children: [
-                                '/databases/mysql/事物隔离级别',
+                                '/databases/mysql/一条数据的写入流程',
+                                '/databases/mysql/隔离级别',
                             ]
                         },
                         {

@@ -202,3 +202,21 @@ ConcurrentHashMap在JDK1.7和JDK1.8以后的差别比较大
 2. 在put数据时，根据key的hash判断Node数组下标，当前下标元素为空时（即链表头节点为空），通过CAS方式对头节点赋值；
 3. 如果此时头节点已存在，则用synchronized锁定头节点，然后在当前链表中进行数据的增加；
 4，当链表数量大于8时，链表的结构会自动转换成红黑树的结构。
+
+### MySQL执行计划（explain）
+1. select_type: 查询类型，包括SIMPLE（简单查询），PRIMARY（子查询最外层的查询）、UNION
+2. type：
+   + system
+   + consts: 指定主键查询或唯一索引查询，只匹配一条数据
+   + eq_ref: 主键或唯一索引被连接使用
+   + ref: 使用普通索引查询
+   + range：使用索引范围查询
+   + index: 扫描某个索引的全量数据
+   + ALL：全表扫描，即扫描聚集索引的所有叶子节点
+3. possible_keys： 可能使用的索引
+4. key：实际使用的索引
+5. rows：查询中读取的行数，是一个大概的值，不是结果集的数量
+6. Extra: 一些额外的信息
+   + using index
+   + using where
+   + using index condition
