@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SQL执行原理 | yilyn</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/images/logo.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.e94c6cca.css" as="style"><link rel="preload" href="/assets/js/app.fc143e94.js" as="script"><link rel="preload" href="/assets/js/2.108ee2cf.js" as="script"><link rel="preload" href="/assets/js/12.9595661c.js" as="script"><link rel="prefetch" href="/assets/js/10.a57b8461.js"><link rel="prefetch" href="/assets/js/11.d99d7187.js"><link rel="prefetch" href="/assets/js/13.045b780f.js"><link rel="prefetch" href="/assets/js/14.ce919ba4.js"><link rel="prefetch" href="/assets/js/15.ba932665.js"><link rel="prefetch" href="/assets/js/16.40d1859b.js"><link rel="prefetch" href="/assets/js/17.3c7e19ce.js"><link rel="prefetch" href="/assets/js/18.779bac3d.js"><link rel="prefetch" href="/assets/js/19.d7ca8240.js"><link rel="prefetch" href="/assets/js/20.fa29e057.js"><link rel="prefetch" href="/assets/js/21.08a55853.js"><link rel="prefetch" href="/assets/js/22.7b22490d.js"><link rel="prefetch" href="/assets/js/23.b77e615f.js"><link rel="prefetch" href="/assets/js/24.29604ee4.js"><link rel="prefetch" href="/assets/js/25.3fe9db4e.js"><link rel="prefetch" href="/assets/js/26.d4a342ad.js"><link rel="prefetch" href="/assets/js/27.8e4e604d.js"><link rel="prefetch" href="/assets/js/28.7bb821d7.js"><link rel="prefetch" href="/assets/js/29.d62c470b.js"><link rel="prefetch" href="/assets/js/3.2748d5a9.js"><link rel="prefetch" href="/assets/js/30.1689fdfe.js"><link rel="prefetch" href="/assets/js/31.d470db69.js"><link rel="prefetch" href="/assets/js/32.20e553db.js"><link rel="prefetch" href="/assets/js/33.7aa86200.js"><link rel="prefetch" href="/assets/js/34.41043434.js"><link rel="prefetch" href="/assets/js/4.813659c8.js"><link rel="prefetch" href="/assets/js/5.48d5b9da.js"><link rel="prefetch" href="/assets/js/6.57e1d6ad.js"><link rel="prefetch" href="/assets/js/7.bf7085c0.js"><link rel="prefetch" href="/assets/js/8.80c08002.js"><link rel="prefetch" href="/assets/js/9.621e63fd.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e94c6cca.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/images/logo.png" alt="yilyn" class="logo"> <span class="site-name can-hide">yilyn</span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JAVA基础" class="dropdown-title"><span class="title">JAVA基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="JAVA基础" class="mobile-dropdown-title"><span class="title">JAVA基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java_basics/collections/" class="nav-link">
+  集合类
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/multi_threads/" class="nav-link">
+  多线程
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/JUC/" class="nav-link">
+  JUC
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/jvm/" class="nav-link">
+  JVM
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="网络" class="dropdown-title"><span class="title">网络</span> <span class="arrow down"></span></button> <button type="button" aria-label="网络" class="mobile-dropdown-title"><span class="title">网络</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/network/netty/" class="nav-link">
+  netty
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="环境搭建" class="dropdown-title"><span class="title">环境搭建</span> <span class="arrow down"></span></button> <button type="button" aria-label="环境搭建" class="mobile-dropdown-title"><span class="title">环境搭建</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/env_build/blog_vuepress/" class="nav-link">
+  博客by-vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/env_build/docker/" class="nav-link">
+  docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/big_data/flink-cdc/" class="nav-link">
+  Flink CDC
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/databases/mysql/" class="nav-link router-link-active">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/databases/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="记录" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="记录" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/take_notes/interview/" class="nav-link">
+  面试
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JAVA基础" class="dropdown-title"><span class="title">JAVA基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="JAVA基础" class="mobile-dropdown-title"><span class="title">JAVA基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java_basics/collections/" class="nav-link">
+  集合类
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/multi_threads/" class="nav-link">
+  多线程
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/JUC/" class="nav-link">
+  JUC
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/jvm/" class="nav-link">
+  JVM
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="网络" class="dropdown-title"><span class="title">网络</span> <span class="arrow down"></span></button> <button type="button" aria-label="网络" class="mobile-dropdown-title"><span class="title">网络</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/network/netty/" class="nav-link">
+  netty
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="环境搭建" class="dropdown-title"><span class="title">环境搭建</span> <span class="arrow down"></span></button> <button type="button" aria-label="环境搭建" class="mobile-dropdown-title"><span class="title">环境搭建</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/env_build/blog_vuepress/" class="nav-link">
+  博客by-vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/env_build/docker/" class="nav-link">
+  docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/big_data/flink-cdc/" class="nav-link">
+  Flink CDC
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/databases/mysql/" class="nav-link router-link-active">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/databases/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="记录" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="记录" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/take_notes/interview/" class="nav-link">
+  面试
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>数据库</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/databases/mysql/" class="sidebar-heading clickable router-link-active open"><span>MySQL</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/databases/mysql/一条数据的写入流程.html" class="sidebar-link">一条数据是如何写入的</a></li><li><a href="/databases/mysql/隔离级别.html" class="sidebar-link">隔离级别</a></li></ul></section></li><li><a href="/databases/redis/" class="sidebar-link">Redis</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="sql执行原理"><a href="#sql执行原理" class="header-anchor">#</a> SQL执行原理</h1> <ol><li>客户端与MySQL Server建立连接</li> <li>缓存查询，Map结构，key为sql语句，value为结果集， 8.0后删除该功能</li> <li>SQL解析器：语法解析和词法解析</li> <li>预处理器：SQL模板（如where id = ？）提交，参数提交；语法验证(表和列是否存在)</li> <li>SQL优化器：基于成本的优化器，计算IO成本和CPU成本，选择最小的进行执行</li> <li>执行器：通过 InnoDB提供的 Handler API 接口，对数据进行查询并返回给客户端</li></ol></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.fc143e94.js" defer></script><script src="/assets/js/2.108ee2cf.js" defer></script><script src="/assets/js/12.9595661c.js" defer></script>
+  </body>
+</html>
