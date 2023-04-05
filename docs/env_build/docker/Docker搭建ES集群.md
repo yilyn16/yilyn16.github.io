@@ -87,4 +87,6 @@ elasticsearch.hosts: [ "http://es-node0:9200","http://es-node1:9200","http://es-
 docker restart 容器ID
 ```
 
-### 6. 访问kibana, http://localhost:5601 顺利进入kibana说明集群搭建成功
+### 6. 验证
+
+访问kibana, http://localhost:5601 顺利进入kibana说明集群搭建成功

@@ -1,7 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="877c9c5c-be57-4bb7-ae73-8fe5ef73da7d" name="Default Changelist" comment="deploy" />
+    <list default="true" id="877c9c5c-be57-4bb7-ae73-8fe5ef73da7d" name="Default Changelist" comment="deploy">
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/images/docker/kafka集群topic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/images/docker/kafka集群生产消费测试.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/images/middleware/kafka/Kafka架构图.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/env_build/docker/Docker搭建Kafka集群.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/middleware/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/middleware/kafka/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/middleware/kafka/Spring集成Kafka.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/10.aba83e13.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/11.4b289803.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/12.9595661c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/13.b997ef13.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/14.8ad61ced.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/15.462f7e82.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/16.555e936a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/18.34bec3c3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/19.6700e980.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/20.8d1d15fd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/21.96b03505.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/22.7b22490d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/23.661ccf58.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/24.3399c2bc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/25.663e189d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/26.f6ccda52.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/27.8e4e604d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/28.13d93805.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/29.617218c2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/3.4d42e23e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/30.1689fdfe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/31.1577d943.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/32.2c395397.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/33.7aa86200.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/34.b5aa78bd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/7.77cf701d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/8.80c08002.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/9.655179ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/js/app.29e2a4d2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/big_data/flink-cdc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/big_data/flink-cdc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/big_data/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/big_data/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/databases/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/databases/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/databases/mysql/SQL执行原理.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/databases/mysql/SQL执行原理.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/databases/mysql/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/databases/mysql/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/databases/mysql/一条数据的写入流程.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/databases/mysql/一条数据的写入流程.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/databases/mysql/隔离级别.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/databases/mysql/隔离级别.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/databases/redis/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/databases/redis/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/env_build/blog_vuepress/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/env_build/blog_vuepress/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/env_build/docker/Docker搭建ES集群.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/env_build/docker/Docker搭建ES集群.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/env_build/docker/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/env_build/docker/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/env_build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/env_build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/JUC/AQS.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/JUC/AQS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/JUC/ReentrantLock.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/JUC/ReentrantLock.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/JUC/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/JUC/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/collections/Collection-List.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/collections/Collection-List.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/collections/Map.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/collections/Map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/collections/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/collections/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/jvm/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/jvm/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/multi_threads/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/multi_threads/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/multi_threads/线程池.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/java_basics/multi_threads/线程池.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/network/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/network/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/network/netty/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/network/netty/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/network/netty/简单demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/network/netty/简单demo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/spring/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/spring/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/take_notes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/take_notes/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/take_notes/interview/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/take_notes/interview/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/env_build/docker/Docker搭建ES集群.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/env_build/docker/Docker搭建ES集群.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/.temp/app-enhancers/global-components-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/.temp/app-enhancers/global-components-1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/.temp/internal/app-enhancers.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/.temp/internal/app-enhancers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/.temp/internal/page-components.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/.temp/internal/page-components.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/.temp/internal/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/.temp/internal/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/.temp/internal/siteData.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/.temp/internal/siteData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/05376c787260de74459e8096aa564df6.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/05376c787260de74459e8096aa564df6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/0d547eee449124b987cfd53a4d8c779f.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/0d547eee449124b987cfd53a4d8c779f.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/0dd6074f4dafe0f3cfb84ae3fa925f53.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/0dd6074f4dafe0f3cfb84ae3fa925f53.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/1383e1dc20331a8754f7b66c4c1b0da6.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/1383e1dc20331a8754f7b66c4c1b0da6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/13aac7201e3b3c6a707f2236658647ee.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/13aac7201e3b3c6a707f2236658647ee.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/19629736273a7a119f9c070149257b14.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/19629736273a7a119f9c070149257b14.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/19c444802016ff2aec6aee1a46f3d102.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/19c444802016ff2aec6aee1a46f3d102.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/20c3c32a77f03b29ac807d718b5f5d8f.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/20c3c32a77f03b29ac807d718b5f5d8f.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/20d72e15821982f62b90d90518400a3e.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/20d72e15821982f62b90d90518400a3e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/29526e139e55ce19201acaca5d2fc5be.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/29526e139e55ce19201acaca5d2fc5be.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/2c92ddd98663588e9d20aeada6f79ec3.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/2c92ddd98663588e9d20aeada6f79ec3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/360f6cc2e0f8872873168ffc87f5e9d8.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/360f6cc2e0f8872873168ffc87f5e9d8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/376a93d62b8db5565b8a260571a011b1.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/376a93d62b8db5565b8a260571a011b1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/3965ec407ba7514f13f9a31c3a3e7727.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/3965ec407ba7514f13f9a31c3a3e7727.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/3be6577a29692e32a7e6567811dc067a.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/3be6577a29692e32a7e6567811dc067a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/42005e9d5f97430f6e1c47ca3be23e55.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/42005e9d5f97430f6e1c47ca3be23e55.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/42978f6b1ae984451daf0fc19eaca4bc.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/42978f6b1ae984451daf0fc19eaca4bc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/4b2eb3634b8c12a1e978db3c28608daa.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/4b2eb3634b8c12a1e978db3c28608daa.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/4b77a5b0e7716975bf9560cdd72d5530.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/4b77a5b0e7716975bf9560cdd72d5530.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/50fac4d50ee58390cfad61b8501776e9.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/50fac4d50ee58390cfad61b8501776e9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/52dbf822c184ca54b8d34d9f5c65028b.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/52dbf822c184ca54b8d34d9f5c65028b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/570f025bbd8438e9667b3d52aeca90fa.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/570f025bbd8438e9667b3d52aeca90fa.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/57267a6c5816e1facbef56152e364d86.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/57267a6c5816e1facbef56152e364d86.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/583d9db53b56c517374ce7ddf9157306.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/583d9db53b56c517374ce7ddf9157306.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/5e986089db13edde9eaf66c735ddef29.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/5e986089db13edde9eaf66c735ddef29.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/610e411a9662544b6bd4b6f5b6577ab9.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/610e411a9662544b6bd4b6f5b6577ab9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/66ab2b9bed7330f352c25ec83dffea46.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/66ab2b9bed7330f352c25ec83dffea46.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/6839a27642fb5ffe3b213b2d4efb8bd5.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/6839a27642fb5ffe3b213b2d4efb8bd5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/68f4a8e8dd447f8a60b193cd58803fe9.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/68f4a8e8dd447f8a60b193cd58803fe9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/6d83d7d5ffb08c61901473cd58f67138.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/6d83d7d5ffb08c61901473cd58f67138.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/720312edf102336531c111fd19d05c5b.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/720312edf102336531c111fd19d05c5b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/72ba5d5cfbf6844b03e828ba99315d0f.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/72ba5d5cfbf6844b03e828ba99315d0f.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/7827a563ba31da86468a5f3e5fddf76e.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/7827a563ba31da86468a5f3e5fddf76e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/7cc901dcf1b981c4f8931f417acbfc79.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/7cc901dcf1b981c4f8931f417acbfc79.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/814b2e5ee22a3834f18b4a173a92ce99.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/814b2e5ee22a3834f18b4a173a92ce99.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/848bb268d714ea4ff8e37250e8dd8f03.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/848bb268d714ea4ff8e37250e8dd8f03.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/8d8db54a720a5509e47231b0e7bb4ebe.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/8d8db54a720a5509e47231b0e7bb4ebe.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/907cd2b05a88928fda7a040372fba599.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/907cd2b05a88928fda7a040372fba599.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/91032c7312d47c66f6c00694c9bc4048.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/91032c7312d47c66f6c00694c9bc4048.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/9946ace7d3fab986cb607d524bd6041a.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/9946ace7d3fab986cb607d524bd6041a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/9e798bdd45ae61bbb773dde4740a606c.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/9e798bdd45ae61bbb773dde4740a606c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/9f61b2825cf1eda7b9ba989d368944f2.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/9f61b2825cf1eda7b9ba989d368944f2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/a12ea40a45e21b3e8c9b31a7f87baf83.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/a12ea40a45e21b3e8c9b31a7f87baf83.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/a81060e3ad4e727ee56dc78455e27c78.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/a81060e3ad4e727ee56dc78455e27c78.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/a81b046defe0b56c3cb8d7d16fae9358.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/a81b046defe0b56c3cb8d7d16fae9358.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/ab56c6345f02b478ab4c9dbd8747be41.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/ab56c6345f02b478ab4c9dbd8747be41.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/b288ecfac672ead20bb40dc173301ca3.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/b288ecfac672ead20bb40dc173301ca3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/b487bcf73d2ff673f58a3ea1766c53f4.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/b487bcf73d2ff673f58a3ea1766c53f4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/b8b97c0cc18d05d130f901914fba92df.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/b8b97c0cc18d05d130f901914fba92df.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/b8ded40f32f61fe956de50ca563cdd45.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/b8ded40f32f61fe956de50ca563cdd45.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/b9242e230b8f78786d5fbaf3fb4ad5b3.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/b9242e230b8f78786d5fbaf3fb4ad5b3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/b95822b7d08bc5a2d3c189aaa0e2da6e.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/b95822b7d08bc5a2d3c189aaa0e2da6e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/bb16a2e9a20f90c8aeec0bc11058731b.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/bb16a2e9a20f90c8aeec0bc11058731b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/bb69754356a6cfe66f65e3cd968a0158.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/bb69754356a6cfe66f65e3cd968a0158.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/d3488d5338bf768a2ad4579b187b72cb.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/d3488d5338bf768a2ad4579b187b72cb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/da6773a956589e786d7848ba039913e1.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/da6773a956589e786d7848ba039913e1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/db78a25cd74e12164d8f085da2a43324.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/db78a25cd74e12164d8f085da2a43324.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/e2d49fe165f854ac4ee52c174774d8d5.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/e2d49fe165f854ac4ee52c174774d8d5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/ecc89f948d8e76523a7c046a47327206.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/ecc89f948d8e76523a7c046a47327206.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/f357de4dfa3ac322e80d0a82350c8382.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vuepress/core/node_modules/.cache/vuepress/f357de4dfa3ac322e80d0a82350c8382.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +160,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/.vuepress/public/images/java_basics/JUC" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/.vuepress/public/images/middleware/kafka" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -39,11 +172,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/.vuepress/public/images/middleware/kafka" />
+      <recent name="$PROJECT_DIR$/docs/.vuepress/public/images/docker" />
       <recent name="$PROJECT_DIR$/docs/.vuepress/public/images/java_basics/JUC" />
       <recent name="$PROJECT_DIR$/docs/.vuepress/public/images/databases" />
-      <recent name="$PROJECT_DIR$/docs/.vuepress/public/images/docker" />
       <recent name="$PROJECT_DIR$/docs/.vuepress/public/images/vuepress-blog" />
-      <recent name="$PROJECT_DIR$/docs/.vuepress/public/images/interview" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/docs/.vuepress" />
@@ -51,13 +184,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -73,7 +208,8 @@
       <updated>1679227094727</updated>
       <workItem from="1679227096228" duration="5601000" />
       <workItem from="1679491347043" duration="5675000" />
-      <workItem from="1679735562522" duration="15760000" />
+      <workItem from="1679735562522" duration="16052000" />
+      <workItem from="1680678607721" duration="4041000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1679227752522</created>

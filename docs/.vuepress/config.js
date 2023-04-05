@@ -40,12 +40,11 @@ module.exports = {
                 { text: 'JUC', link: '/java_basics/JUC/'},
                 { text: 'JVM', link: '/java_basics/jvm/'},
             ]},
+            { text: '中间件', items:[
+                { text: 'Kafka', link: '/middleware/kafka/' },
+            ]},
             { text: '网络', items:[
                 { text: 'netty', link: '/network/netty/' },
-            ]},
-            { text: '环境搭建', items:[
-                { text: '博客by-vuepress', link: '/env_build/blog_vuepress/' },
-                { text: 'docker', link: '/env_build/docker/' },
             ]},
             { text: '大数据', items:[
                 {text:'Flink CDC', link: '/big_data/flink-cdc/'},
@@ -53,6 +52,10 @@ module.exports = {
             { text: '数据库', items:[
                 { text: 'MySQL', link: '/databases/mysql/' },
                 { text: 'Redis', link: '/databases/redis/' },
+            ]},
+            { text: '环境搭建', items:[
+                { text: '博客by-vuepress', link: '/env_build/blog_vuepress/' },
+                { text: 'docker', link: '/env_build/docker/' },
             ]},
             { text: '记录', items:[
                 { text: '面试', link: '/take_notes/interview/' },
@@ -96,6 +99,19 @@ module.exports = {
                                 '/java_basics/multi_threads/线程池',
                             ]
                         },
+                    ]
+                }
+            ],
+            '/middleware/': [
+                {
+                    title: '中间件',
+                    collapsable: true,
+                    children: [
+                        {
+                            title: 'Kafka',
+                            collapsable: true,
+                            path: '/middleware/kafka/',
+                        }
                     ]
                 }
             ],
@@ -171,6 +187,11 @@ module.exports = {
                                     title: 'docker搭建ES集群',
                                     collapsable: true,
                                     path: '/env_build/docker/Docker搭建ES集群',
+                                },
+                                {
+                                    title: 'docker搭建Kafka集群',
+                                    collapsable: true,
+                                    path: '/env_build/docker/Docker搭建Kafka集群',
                                 }
 
                             ]
