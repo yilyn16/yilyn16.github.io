@@ -266,3 +266,23 @@ ConcurrentHashMap在JDK1.7和JDK1.8以后的差别比较大
 
 1. 防止同一个.class被重复加载
 2. 保证上级的类加载器的核心类不被子类加载器加载而篡改，即使被篡改了，那么jvm也认为被篡改的类与核心类不是同一个class对象。
+
+### MySQL RC和RR隔离级别的区别
+
++ RR支持 gap lock(间隙锁)， 而RC不支持gap lock；因为RR需要使用gap lock解决幻读问题，而RC是支持幻读的；
++ 对非索引列进行条件过滤时，RC会将不符合条件的行锁释放，而RR会将不符合条件的数据也加上行锁，所以RR隔离级别的并发更差。
++ 对binlog而言，RC隔离级别不支持statement格式的binlog，会造成主从不一致的情况（statement格式下，binlog是按照commit顺序记录的，而row和mixed在记录commit顺序的同时，还会记录修改前的数据）
++ RC隔离级别下，在同一个事物中，多次进行select查询，每次select都会生成一个Read View，而RR隔离级别在同一个事物中，多次select查询都是用的是同一个ReadView。
+
+### 最左匹配的原理
+
+比如某张表中的两个字段a和b，对应的创建了一个联合索引idx_a_b, 在生成索引时，索引中的数据是根据a和b字段的值进行分级排序的，当a的值相等时，才根据b字段的值进行排序，所以在索引数据中，整体数据是按照a字段的值进行排序的，b的值不是顺序的，所以查询时如果不按a字段进行查询，就不会走这个联合索引。
+
+### kafka为什么不支持读写分离
+Kafka生产者将数据写入partion的Leader节点，消费者也会从partition的Leader节点拉取消息，如果使用读写分离，即生产者写入Leader，消费者从Follower拉取消息，可能会出现如下问题：
+1. 数据不一致问题，比如在这样的场景下，Leader和Follower的数据是一样的，当Leader数据进行了修改，但是还没有同步到Follower，此时如果消费者从Follower拉取数据，这个数据是错误的。
+2. 实时性问题，Leader和Follower之间数据同步不是实时的，这个同步需要经过网络IO，磁盘多次IO的操作，比较耗时，所以如果从Follower拉取消息，实时性无法保证。
+
+### ES数据写入的流程
+
+![ES数据写入流程](/images/interview/ES数据写入流程.png)
