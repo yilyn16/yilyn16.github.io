@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="877c9c5c-be57-4bb7-ae73-8fe5ef73da7d" name="Default Changelist" comment="deploy">
-      <change beforePath="$PROJECT_DIR$/docs/take_notes/interview/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/take_notes/interview/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/env_build/monitor/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/env_build/monitor/基于Promethus+Grafana搭建服务监控.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/middleware/zookeeper/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/take_notes/essay/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +32,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/.vuepress/public/images/middleware/kafka" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/.vuepress/public/images/interview" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -41,11 +44,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/.vuepress/public/images/interview" />
       <recent name="$PROJECT_DIR$/docs/.vuepress/public/images/middleware/kafka" />
       <recent name="$PROJECT_DIR$/docs/.vuepress/public/images/docker" />
       <recent name="$PROJECT_DIR$/docs/.vuepress/public/images/java_basics/JUC" />
       <recent name="$PROJECT_DIR$/docs/.vuepress/public/images/databases" />
-      <recent name="$PROJECT_DIR$/docs/.vuepress/public/images/vuepress-blog" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/docs/.vuepress" />
@@ -78,7 +81,7 @@
       <workItem from="1679227096228" duration="5601000" />
       <workItem from="1679491347043" duration="5675000" />
       <workItem from="1679735562522" duration="16052000" />
-      <workItem from="1680678607721" duration="6848000" />
+      <workItem from="1680678607721" duration="11831000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1679227752522</created>

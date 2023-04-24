@@ -286,3 +286,9 @@ Kafka生产者将数据写入partion的Leader节点，消费者也会从partitio
 ### ES数据写入的流程
 
 ![ES数据写入流程](/images/interview/ES数据写入流程.png)
+
+### SpringCloud和Dubbo的比较
+1. SpringCloud 更偏向于微服务的整体解决方案，而Dubbo是偏向于服务治理
+2. SpringCloud 依托于Spring生态，功能更丰富，比如Gateway、Config等；Dubbo这些功能相对没有那么丰富
+3. SpringCloud 借助Fein进行Rest风格的调用，使用http协议；而Dubbo使用dubbo协议，对传输的数据进行序列化和反序列化，底层基于netty的NIO，效率更高
+4. SpringCloud 官方推荐Eureka作为注册中心，而Dubbo默认使用Zookeeper作为注册中心
