@@ -208,6 +208,11 @@ module.exports = {
                             title: '面试',
                             collapsable: true,
                             path: '/take_notes/interview/'
+                        },
+                        {
+                            title: '好文推荐',
+                            collapsable: true,
+                            path: '/take_notes/essay/'
                         }
                     ]
                 }
