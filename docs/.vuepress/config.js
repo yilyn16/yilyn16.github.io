@@ -59,6 +59,7 @@ module.exports = {
             ]},
             { text: '记录', items:[
                 { text: '面试', link: '/take_notes/interview/' },
+                { text: '优秀文章', link: '/take_notes/essay/' },
             ]},
         ],
         sidebarDepth: 0, // 侧边栏显示等级
@@ -74,7 +75,7 @@ module.exports = {
                             path: '/java_basics/collections/',
                             children: [
                                 '/java_basics/collections/Collection-List',
-                                '/java_basics/collections/Map',
+                                '/java_basics/collections/HashMap',
                             ]
                         },
                         {
