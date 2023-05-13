@@ -287,6 +287,12 @@ Kafka生产者将数据写入partion的Leader节点，消费者也会从partitio
 
 ![ES数据写入流程](/images/interview/ES数据写入流程.png)
 
+### ES倒排索引的原理
+倒排索引包含三种数据类型
+1. 词项字典（term_dictionay）：存放文档中的关键字，不重复
+2. 倒排表（posting_list）：存放词项字典中的关键字所对应的所有文档id，这些id类型为int，且有序
+3. 词项索引（term_index）：词语的索引，是ES底层的核心，使用FST等压缩算法，将索引文件压缩存储。
+
 ### SpringCloud和Dubbo的比较
 1. SpringCloud 更偏向于微服务的整体解决方案，而Dubbo是偏向于服务治理
 2. SpringCloud 依托于Spring生态，功能更丰富，比如Gateway、Config等；Dubbo这些功能相对没有那么丰富
