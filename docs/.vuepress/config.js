@@ -75,7 +75,8 @@ module.exports = {
                             path: '/java_basics/collections/',
                             children: [
                                 '/java_basics/collections/Collection-List',
-                                '/java_basics/collections/HashMap',
+                                '/java_basics/collections/Map-ConcurrentHashMap',
+                                '/java_basics/collections/Map-HashMap',
                             ]
                         },
                         {
@@ -98,6 +99,7 @@ module.exports = {
                             path: '/java_basics/multi_threads/',
                             children: [
                                 '/java_basics/multi_threads/线程池',
+                                '/java_basics/multi_threads/ThreadLocal',
                             ]
                         },
                     ]
