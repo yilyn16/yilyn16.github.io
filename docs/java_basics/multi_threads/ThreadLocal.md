@@ -56,9 +56,9 @@ public T get() {
 
 如图，上图中如果将tl变量置为null，则ThreadLocal将不会被引用，正常情况下，如果Thread对象使用完成后JVM在发生GC时会对Thread进行回收，这种情况下时没有问题的。
 
-但是我们平常在项目中，Thread的创建是使用线程池的，线程池的Thread对象是重复使用的，不会被回收，所以Thread对象中的ThreadMap和ThreadLocalMap.Entry都被Thread引用，所以不会回收，Entry的key（也就是ThredLocal对象）是没有用的，但是它会一致存在，无法被回收。
+但是我们平常在项目中，Thread的创建是使用线程池的，线程池的Thread对象是重复使用的，不会被回收，所以Thread对象引用ThreadMap，而ThreadLocalMap又引用Entry，所以不会回收Entry的key（也就是ThredLocal对象），但它是没有用的，会一直存在，无法被回收。
 
-JDK也对其做了一些优化，使Entry继承自WeakReference，从而在GC发生时，如果Entry没有被其他对象所引用，那么就会对这个Entry进行回收
+JDK也对其做了一些优化，使Entry继承自WeakReference，从而在GC发生时，如果Entry没有被其他对象所引用，那么就会对这个Entry的key进行回收，但是value仍然不会被回收。
 
 ### 如何避免
 最普通的办法，也是一种开发规范，就是是在使用完ThreadLocal之后，对其进行一个remove操作，就能避免这种问题
