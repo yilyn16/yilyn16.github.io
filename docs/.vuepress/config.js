@@ -39,6 +39,7 @@ module.exports = {
                 { text: '多线程', link: '/java_basics/multi_threads/'},
                 { text: 'JUC', link: '/java_basics/JUC/'},
                 { text: 'JVM', link: '/java_basics/jvm/'},
+                { text: '算法', link: '/java_basics/algorithm/'},
             ]},
             { text: '中间件', items:[
                 { text: 'Kafka', link: '/middleware/kafka/' },
@@ -100,6 +101,14 @@ module.exports = {
                             children: [
                                 '/java_basics/multi_threads/线程池',
                                 '/java_basics/multi_threads/ThreadLocal',
+                            ]
+                        },
+                        {
+                            title: '算法',
+                            collapsable: true,
+                            path: '/java_basics/algorithm/',
+                            children: [
+                                '/java_basics/algorithm/排序:快速排序',
                             ]
                         },
                     ]
