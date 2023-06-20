@@ -1,10 +1,14 @@
 
 # Netty
 
-Netty 是一个利用 Java 的高级网络的能力，隐藏其背后的复杂性而提供一个易于使用的 API 的客户端/服务器框架。Netty 提供高性能和可扩展性，让你可以自由地专注于你真正感兴趣的东西，你的独特的应用！
+Netty 是一个异步事件驱动的网络应用框架，利用 Java 的高级网络的能力，隐藏其背后的复杂性而提供一个易于使用的 API 的客户端/服务器框架。Netty 提供高性能和可扩展性，让你可以自由地专注于你真正感兴趣的东西，你的独特的应用！
 
 参考书籍：
 <a href='https://www.bookstack.cn/read/essential-netty-in-action/SUMMARY.md'>Netty实战</a>
+
+## Netty功能特性图
+
+![Netty功能特性图.png](/images/network/netty/Netty功能特性图.png)
 
 
 ## Netty的基本构建模块

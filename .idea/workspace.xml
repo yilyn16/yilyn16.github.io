@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="877c9c5c-be57-4bb7-ae73-8fe5ef73da7d" name="Default Changelist" comment="deploy">
-      <change beforePath="$PROJECT_DIR$/docs/java_basics/algorithm/排序:快速排序.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/java_basics/algorithm/排序:快速排序.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/middleware/kafka/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/middleware/kafka/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/images/network/netty/Netty功能特性图.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/network/netty/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/network/netty/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/take_notes/interview/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/take_notes/interview/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +16,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -28,45 +35,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/.vuepress/public/images/java_basics/algorithm/quick_sort" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/yanglin/study/lyn/blog/yilyn16.github.io/docs/.vuepress/public/images/network/netty",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/.vuepress/public/images/network/netty" />
       <recent name="$PROJECT_DIR$/docs/.vuepress/public/images/java_basics/algorithm/quick_sort" />
       <recent name="$PROJECT_DIR$/docs/.vuepress/public/images/java_basics/algorithm" />
       <recent name="$PROJECT_DIR$/docs/.vuepress/dist/images/algorithm" />
       <recent name="$PROJECT_DIR$/docs/.vuepress/public/images/java_basics/thread" />
-      <recent name="$PROJECT_DIR$/docs/.vuepress/public/images/java_basics/collections" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/.vuepress/public/images/network" />
       <recent name="$PROJECT_DIR$/docs/.vuepress/public/images/java_basics/algorithm/quick_sort" />
       <recent name="$PROJECT_DIR$/docs/.vuepress/public/images/java_basics" />
       <recent name="$PROJECT_DIR$/docs/java_basics" />
       <recent name="$PROJECT_DIR$/docs/.vuepress/public/images" />
-      <recent name="$PROJECT_DIR$/docs/.vuepress" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -87,7 +96,9 @@
       <workItem from="1683723718632" duration="444000" />
       <workItem from="1683724364524" duration="1172000" />
       <workItem from="1683725546143" duration="890000" />
-      <workItem from="1683728919393" duration="30746000" />
+      <workItem from="1683728919393" duration="32586000" />
+      <workItem from="1686223322567" duration="557000" />
+      <workItem from="1686707339820" duration="4001000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1679227752522</created>
@@ -140,7 +151,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />

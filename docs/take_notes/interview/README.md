@@ -109,6 +109,15 @@
 2. private final Map<String, Object> earlySingletonObjects = new HashMap<>(16); // 二级缓存，用来存放正在创建中的单例bean，此时的bean是初始化完成的，但是并没有对其属性进行注入
 3. private final Map<String, ObjectFactory<?>> singletonFactories = new HashMap<>(16); // 三级缓存 bean的工厂，用来生成二级缓存中存放的bean的半成品
 
+### spring bean生命周期
+1. 加载bean定义
+2. 实例化bean，根据beanDefinition中的构造函数反射生成bean对象
+3. 填充属性：populateBean()，依赖三级缓存进行依赖注入
+4. 实例化bean： initializeBean(), 对实现Aware接口的bean进行处理
+5. bean的前置通知：applyBeanPostProcessorsBeforeInitialization()
+6. 执行bean的初始化方法：invokeInitMethods(), 对实现InitializingBean接口的bean执行afterPropertiesSet()方法，然后会执行bean中定义的initMethod方法
+7. bean的后置通知：applyBeanPostProcessorsAfterInitialization()，对bean的后置增强，包括AOP的代理等功能
+
 ### main()方法的重载、重写
 main方法**可以被重载**，
 **不能被重写**，因为main方法是被static修饰的静态方法，是脱离对象全局唯一的。
