@@ -15,6 +15,7 @@
   },
   "description": "",
   "dependencies": {
+    "@mr-hope/vuepress-plugin-copy-code": "^1.30.0",
     "vue-template-compiler": "^2.7.14"
   },
   "devDependencies": {

@@ -25,7 +25,13 @@ module.exports = {
                 },
             }
         ],
-    ],
+        [
+            "@mr-hope/copy-code",
+            {
+                // 你的选项
+            },
+        ],
+],
     themeConfig: {
         logo: '/images/logo.png',
         search: false,
