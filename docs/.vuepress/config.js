@@ -52,6 +52,7 @@ module.exports = {
             ]},
             { text: '大数据', items:[
                 {text:'Flink CDC', link: '/big_data/flink-cdc/'},
+                {text:'Flink CDC', link: '/big_data/hadoop/'},
             ] },
             { text: '数据库', items:[
                 { text: 'MySQL', link: '/databases/mysql/' },
@@ -179,6 +180,11 @@ module.exports = {
                             title: 'Flink CDC',
                             collapsable: true,
                             path: '/big_data/flink-cdc/'
+                        },
+                        {
+                            title: 'Hadoop',
+                            collapsable: true,
+                            path: '/big_data/hadoop/'
                         }
                     ]
                 }
