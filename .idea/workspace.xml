@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="877c9c5c-be57-4bb7-ae73-8fe5ef73da7d" name="Default Changelist" comment="deploy">
-      <change afterPath="$PROJECT_DIR$/docs/big_data/hadoop/README.md" afterDir="false" />
+    <list default="true" id="877c9c5c-be57-4bb7-ae73-8fe5ef73da7d" name="Default Changelist" comment="hadoop集群搭建文档">
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/big_data/hadoop/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/big_data/hadoop/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +104,7 @@
       <workItem from="1689576865703" duration="6000" />
       <workItem from="1689576880355" duration="3003000" />
       <workItem from="1689677026316" duration="138000" />
-      <workItem from="1689677385041" duration="3676000" />
+      <workItem from="1689677385041" duration="6256000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1679227752522</created>
@@ -140,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679317822727</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="hadoop集群搭建文档">
+      <created>1689682544198</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689682544198</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +168,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
     <MESSAGE value="deploy" />
-    <option name="LAST_COMMIT_MESSAGE" value="deploy" />
+    <MESSAGE value="hadoop集群搭建文档" />
+    <option name="LAST_COMMIT_MESSAGE" value="hadoop集群搭建文档" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -16,6 +16,7 @@ docker pull ubuntu:16.04
 ```
 
 2. 运行镜像
+
 ```sh
 # 启动镜像，后面是镜像ID
 docker run --name ubuntu-hadoop -itd b6f507652425

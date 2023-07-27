@@ -52,7 +52,7 @@ module.exports = {
             ]},
             { text: '大数据', items:[
                 {text:'Flink CDC', link: '/big_data/flink-cdc/'},
-                {text:'Flink CDC', link: '/big_data/hadoop/'},
+                {text:'Hadoop', link: '/big_data/hadoop/'},
             ] },
             { text: '数据库', items:[
                 { text: 'MySQL', link: '/databases/mysql/' },
@@ -61,6 +61,7 @@ module.exports = {
             { text: '环境搭建', items:[
                 { text: '博客by-vuepress', link: '/env_build/blog_vuepress/' },
                 { text: 'docker', link: '/env_build/docker/' },
+                { text: 'linux', link: '/env_build/linux/' },
             ]},
             { text: '记录', items:[
                 { text: '面试', link: '/take_notes/interview/' },
@@ -215,6 +216,18 @@ module.exports = {
                                     path: '/env_build/docker/Docker搭建Kafka集群',
                                 }
 
+                            ]
+                        },
+                        {
+                            title: 'linux',
+                            collapsable: true,
+                            path: '/env_build/linux/',
+                            children: [
+                                {
+                                    title: 'vim命令基础教程',
+                                    collapsable: true,
+                                    path: '/env_build/linux/vim命令基础教程',
+                                }
                             ]
                         }
                     ]
