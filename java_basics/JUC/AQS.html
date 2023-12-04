@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AQS | yilyn</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/images/logo.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.2cc3792c.css" as="style"><link rel="preload" href="/assets/js/app.550bb993.js" as="script"><link rel="preload" href="/assets/js/2.90409a71.js" as="script"><link rel="preload" href="/assets/js/26.c8e8879b.js" as="script"><link rel="prefetch" href="/assets/js/10.6a1a6c22.js"><link rel="prefetch" href="/assets/js/11.e1beb506.js"><link rel="prefetch" href="/assets/js/12.345d4694.js"><link rel="prefetch" href="/assets/js/13.aa99c9b1.js"><link rel="prefetch" href="/assets/js/14.2e6aae74.js"><link rel="prefetch" href="/assets/js/15.e60da1cd.js"><link rel="prefetch" href="/assets/js/16.4c8c8826.js"><link rel="prefetch" href="/assets/js/17.0a5ea4b2.js"><link rel="prefetch" href="/assets/js/18.4ef3ca88.js"><link rel="prefetch" href="/assets/js/19.ed5b67c2.js"><link rel="prefetch" href="/assets/js/20.64d80033.js"><link rel="prefetch" href="/assets/js/21.e2d4fbf9.js"><link rel="prefetch" href="/assets/js/22.2e95842d.js"><link rel="prefetch" href="/assets/js/23.14aca209.js"><link rel="prefetch" href="/assets/js/24.43ca896f.js"><link rel="prefetch" href="/assets/js/25.c4535bf6.js"><link rel="prefetch" href="/assets/js/27.03c9845f.js"><link rel="prefetch" href="/assets/js/28.88dcb212.js"><link rel="prefetch" href="/assets/js/29.863d604c.js"><link rel="prefetch" href="/assets/js/3.94daacd8.js"><link rel="prefetch" href="/assets/js/30.2084e635.js"><link rel="prefetch" href="/assets/js/31.2ab7f713.js"><link rel="prefetch" href="/assets/js/32.a27dfddd.js"><link rel="prefetch" href="/assets/js/33.c6549401.js"><link rel="prefetch" href="/assets/js/34.06a65af4.js"><link rel="prefetch" href="/assets/js/35.72e623d6.js"><link rel="prefetch" href="/assets/js/36.a7297bce.js"><link rel="prefetch" href="/assets/js/37.9737dca1.js"><link rel="prefetch" href="/assets/js/38.82978130.js"><link rel="prefetch" href="/assets/js/39.fd78df27.js"><link rel="prefetch" href="/assets/js/4.928945bf.js"><link rel="prefetch" href="/assets/js/40.61a1a6ab.js"><link rel="prefetch" href="/assets/js/41.1f086cc5.js"><link rel="prefetch" href="/assets/js/42.bf3ad2c6.js"><link rel="prefetch" href="/assets/js/43.16c54e3d.js"><link rel="prefetch" href="/assets/js/44.33a449ad.js"><link rel="prefetch" href="/assets/js/45.640d491e.js"><link rel="prefetch" href="/assets/js/46.bfd0c1dc.js"><link rel="prefetch" href="/assets/js/47.1657721e.js"><link rel="prefetch" href="/assets/js/48.bdde6d65.js"><link rel="prefetch" href="/assets/js/5.aaf9222d.js"><link rel="prefetch" href="/assets/js/6.77bf1753.js"><link rel="prefetch" href="/assets/js/7.77cf701d.js"><link rel="prefetch" href="/assets/js/8.254f569f.js"><link rel="prefetch" href="/assets/js/9.b33c928a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2cc3792c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/images/logo.png" alt="yilyn" class="logo"> <span class="site-name can-hide">yilyn</span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JAVA基础" class="dropdown-title"><span class="title">JAVA基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="JAVA基础" class="mobile-dropdown-title"><span class="title">JAVA基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java_basics/collections/" class="nav-link">
+  集合类
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/multi_threads/" class="nav-link">
+  多线程
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/JUC/" class="nav-link router-link-active">
+  JUC
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/jvm/" class="nav-link">
+  JVM
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/algorithm/" class="nav-link">
+  算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件" class="dropdown-title"><span class="title">中间件</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件" class="mobile-dropdown-title"><span class="title">中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/middleware/kafka/" class="nav-link">
+  Kafka
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="网络" class="dropdown-title"><span class="title">网络</span> <span class="arrow down"></span></button> <button type="button" aria-label="网络" class="mobile-dropdown-title"><span class="title">网络</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/network/netty/" class="nav-link">
+  netty
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/big_data/flink-cdc/" class="nav-link">
+  Flink CDC
+</a></li><li class="dropdown-item"><!----> <a href="/big_data/hadoop/" class="nav-link">
+  Hadoop
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/databases/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/databases/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="环境搭建" class="dropdown-title"><span class="title">环境搭建</span> <span class="arrow down"></span></button> <button type="button" aria-label="环境搭建" class="mobile-dropdown-title"><span class="title">环境搭建</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/env_build/blog_vuepress/" class="nav-link">
+  博客by-vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/env_build/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/env_build/linux/" class="nav-link">
+  linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="记录" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="记录" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/take_notes/interview/" class="nav-link">
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/take_notes/essay/" class="nav-link">
+  优秀文章
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JAVA基础" class="dropdown-title"><span class="title">JAVA基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="JAVA基础" class="mobile-dropdown-title"><span class="title">JAVA基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java_basics/collections/" class="nav-link">
+  集合类
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/multi_threads/" class="nav-link">
+  多线程
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/JUC/" class="nav-link router-link-active">
+  JUC
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/jvm/" class="nav-link">
+  JVM
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/algorithm/" class="nav-link">
+  算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件" class="dropdown-title"><span class="title">中间件</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件" class="mobile-dropdown-title"><span class="title">中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/middleware/kafka/" class="nav-link">
+  Kafka
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="网络" class="dropdown-title"><span class="title">网络</span> <span class="arrow down"></span></button> <button type="button" aria-label="网络" class="mobile-dropdown-title"><span class="title">网络</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/network/netty/" class="nav-link">
+  netty
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/big_data/flink-cdc/" class="nav-link">
+  Flink CDC
+</a></li><li class="dropdown-item"><!----> <a href="/big_data/hadoop/" class="nav-link">
+  Hadoop
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/databases/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/databases/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="环境搭建" class="dropdown-title"><span class="title">环境搭建</span> <span class="arrow down"></span></button> <button type="button" aria-label="环境搭建" class="mobile-dropdown-title"><span class="title">环境搭建</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/env_build/blog_vuepress/" class="nav-link">
+  博客by-vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/env_build/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/env_build/linux/" class="nav-link">
+  linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="记录" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="记录" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/take_notes/interview/" class="nav-link">
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/take_notes/essay/" class="nav-link">
+  优秀文章
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Java基础</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/java_basics/collections/" class="sidebar-heading clickable"><span>集合</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/java_basics/JUC/" class="sidebar-heading clickable router-link-active open"><span>JUC</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/java_basics/JUC/AQS.html" aria-current="page" class="active sidebar-link">AQS</a></li><li><a href="/java_basics/JUC/ReentrantLock.html" class="sidebar-link">ReentrantLock</a></li></ul></section></li><li><a href="/java_basics/jvm/" class="sidebar-link">JVM</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/java_basics/multi_threads/" class="sidebar-heading clickable"><span>多线程</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/java_basics/algorithm/" class="sidebar-heading clickable"><span>算法</span> <span class="arrow right"></span></a> <!----></section></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="aqs"><a href="#aqs" class="header-anchor">#</a> AQS</h1> <p>AQS是 AbstractQueuedSynchronizer 的缩写，是juc包下的一个基类，是很多实现都是基于AQS实现的部分功能，比如 ReentrantLock、ThreadPoolExecutor的Worker、CountDownLatch等。</p> <h2 id="aqs的核型结构及属性"><a href="#aqs的核型结构及属性" class="header-anchor">#</a> AQS的核型结构及属性</h2> <p><img src="/images/java_basics/JUC/AQS%E7%BB%93%E6%9E%84.png" alt="AQS结构"></p> <h3 id="_1-aqs的属性"><a href="#_1-aqs的属性" class="header-anchor">#</a> 1. AQS的属性</h3> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">/**
+ * 头节点
+ */</span>
+<span class="token keyword">private</span> <span class="token keyword">transient</span> <span class="token keyword">volatile</span> <span class="token class-name">Node</span> head<span class="token punctuation">;</span>
+
+ <span class="token comment">/**
+  * 尾节点
+  */</span>
+ <span class="token keyword">private</span> <span class="token keyword">transient</span> <span class="token keyword">volatile</span> <span class="token class-name">Node</span> tail<span class="token punctuation">;</span>
+
+ <span class="token comment">/**
+  * 同步状态
+  * 代表同步状态，state = 0代表没有被加锁，state = 1代表已被一个线程加锁，state &gt; 1代表被同一个线程多次加锁（可重入）
+  */</span>
+ <span class="token keyword">private</span> <span class="token keyword">volatile</span> <span class="token keyword">int</span> state<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h3 id="_2-node节点-也叫clh队列"><a href="#_2-node节点-也叫clh队列" class="header-anchor">#</a> 2. Node节点，也叫CLH队列</h3> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">class</span> <span class="token class-name">Node</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+    * waitStatus 对应的4个常量值
+    */</span>
+    <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span> <span class="token constant">CANCELLED</span> <span class="token operator">=</span>  <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span> <span class="token constant">SIGNAL</span>    <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span> <span class="token constant">CONDITION</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span> <span class="token constant">PROPAGATE</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">;</span>
+
+     <span class="token comment">/**
+      *   SIGNAL:     后继节点线程需要被唤醒时的当前节点状态。
+      *   当队列中加入后继节点被挂起(block)时，其前驱节点会被设置为SIGNAL状态，表示该节点需要被唤醒。
+      *               
+      *   CANCELLED:  节点引用线程由于等待超时或被打断时的状态。
+      *   
+      *   PROPAGATE:  仅在释放共享锁releaseShared时对头节点使用。
+      *   
+      *   0:          节点初始化的状态
+      *
+      *   CONDITION:    当节点线程进入condition队列时的状态。
+      *
+      * 这些值按数字排列以简化使用。非负值意味着节点不需要发出信号。因此，大多数代码只需要比较大小即可。
+      */</span>
+     <span class="token keyword">volatile</span> <span class="token keyword">int</span> waitStatus<span class="token punctuation">;</span>
+
+     <span class="token comment">/**
+      * 前驱节点
+      */</span>
+     <span class="token keyword">volatile</span> <span class="token class-name">Node</span> prev<span class="token punctuation">;</span>
+
+     <span class="token comment">/**
+      * 后置节点
+      */</span>
+     <span class="token keyword">volatile</span> <span class="token class-name">Node</span> next<span class="token punctuation">;</span>
+
+     <span class="token comment">/**
+      * 当前节点等待的线程，头节点不包含线程
+      */</span>
+     <span class="token keyword">volatile</span> <span class="token class-name">Thread</span> thread<span class="token punctuation">;</span>
+
+     <span class="token comment">/**
+      * condition条件队列
+      */</span>
+     <span class="token class-name">Node</span> nextWaiter<span class="token punctuation">;</span>
+
+ <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br></div></div><h3 id="_3-模板方法"><a href="#_3-模板方法" class="header-anchor">#</a> 3. 模板方法</h3> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">//尝试获取独占锁</span>
+<span class="token keyword">protected</span> <span class="token keyword">boolean</span> <span class="token function">tryAcquire</span><span class="token punctuation">(</span><span class="token keyword">int</span> arg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">UnsupportedOperationException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//尝试释放独占锁</span>
+<span class="token keyword">protected</span> <span class="token keyword">boolean</span> <span class="token function">tryRelease</span><span class="token punctuation">(</span><span class="token keyword">int</span> arg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">UnsupportedOperationException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//尝试获取共享锁</span>
+<span class="token keyword">protected</span> <span class="token keyword">int</span> <span class="token function">tryAcquireShared</span><span class="token punctuation">(</span><span class="token keyword">int</span> arg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">UnsupportedOperationException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//尝试释放共享锁</span>
+<span class="token keyword">protected</span> <span class="token keyword">boolean</span> <span class="token function">tryReleaseShared</span><span class="token punctuation">(</span><span class="token keyword">int</span> arg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">UnsupportedOperationException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//判断是否为独占锁</span>
+<span class="token keyword">protected</span> <span class="token keyword">boolean</span> <span class="token function">isHeldExclusively</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">UnsupportedOperationException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><h2 id="独占锁和共享锁定"><a href="#独占锁和共享锁定" class="header-anchor">#</a> 独占锁和共享锁定</h2> <h3 id="独占锁"><a href="#独占锁" class="header-anchor">#</a> 独占锁</h3> <ol><li>acquire()</li></ol> <p>acquire()方法内部调用3个函数：</p> <ul><li>其中tryAcquire()需要在实现类中自行实现，如果返回true，则代表获取锁成功，直接返回；如果返回false，则将当前线程包装后入队；所以acquire()方法默认为非公平锁</li> <li>addWaiter()是将当前线程包装为一个Node节点，</li></ul> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">/**
+ *  以独占模式获取锁，如果获取成功则直接返回，如果获取失败，则入队等待
+ *  int arg 可以根据实现自行设计
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">void</span> <span class="token function">acquire</span><span class="token punctuation">(</span><span class="token keyword">int</span> arg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//tryAcquire(arg)方法由实现类实现</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">tryAcquire</span><span class="token punctuation">(</span>arg<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span>
+        <span class="token function">acquireQueued</span><span class="token punctuation">(</span><span class="token function">addWaiter</span><span class="token punctuation">(</span><span class="token class-name">Node</span><span class="token punctuation">.</span><span class="token constant">EXCLUSIVE</span><span class="token punctuation">)</span><span class="token punctuation">,</span> arg<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token function">selfInterrupt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/java_basics/collections/Map-HashMap.html" class="prev">
+        HashMap
+      </a></span> <span class="next"><a href="/java_basics/JUC/ReentrantLock.html">
+        ReentrantLock
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.550bb993.js" defer></script><script src="/assets/js/2.90409a71.js" defer></script><script src="/assets/js/26.c8e8879b.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>快速排序 | yilyn</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/images/logo.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.2cc3792c.css" as="style"><link rel="preload" href="/assets/js/app.550bb993.js" as="script"><link rel="preload" href="/assets/js/2.90409a71.js" as="script"><link rel="preload" href="/assets/js/30.2084e635.js" as="script"><link rel="prefetch" href="/assets/js/10.6a1a6c22.js"><link rel="prefetch" href="/assets/js/11.e1beb506.js"><link rel="prefetch" href="/assets/js/12.345d4694.js"><link rel="prefetch" href="/assets/js/13.aa99c9b1.js"><link rel="prefetch" href="/assets/js/14.2e6aae74.js"><link rel="prefetch" href="/assets/js/15.e60da1cd.js"><link rel="prefetch" href="/assets/js/16.4c8c8826.js"><link rel="prefetch" href="/assets/js/17.0a5ea4b2.js"><link rel="prefetch" href="/assets/js/18.4ef3ca88.js"><link rel="prefetch" href="/assets/js/19.ed5b67c2.js"><link rel="prefetch" href="/assets/js/20.64d80033.js"><link rel="prefetch" href="/assets/js/21.e2d4fbf9.js"><link rel="prefetch" href="/assets/js/22.2e95842d.js"><link rel="prefetch" href="/assets/js/23.14aca209.js"><link rel="prefetch" href="/assets/js/24.43ca896f.js"><link rel="prefetch" href="/assets/js/25.c4535bf6.js"><link rel="prefetch" href="/assets/js/26.c8e8879b.js"><link rel="prefetch" href="/assets/js/27.03c9845f.js"><link rel="prefetch" href="/assets/js/28.88dcb212.js"><link rel="prefetch" href="/assets/js/29.863d604c.js"><link rel="prefetch" href="/assets/js/3.94daacd8.js"><link rel="prefetch" href="/assets/js/31.2ab7f713.js"><link rel="prefetch" href="/assets/js/32.a27dfddd.js"><link rel="prefetch" href="/assets/js/33.c6549401.js"><link rel="prefetch" href="/assets/js/34.06a65af4.js"><link rel="prefetch" href="/assets/js/35.72e623d6.js"><link rel="prefetch" href="/assets/js/36.a7297bce.js"><link rel="prefetch" href="/assets/js/37.9737dca1.js"><link rel="prefetch" href="/assets/js/38.82978130.js"><link rel="prefetch" href="/assets/js/39.fd78df27.js"><link rel="prefetch" href="/assets/js/4.928945bf.js"><link rel="prefetch" href="/assets/js/40.61a1a6ab.js"><link rel="prefetch" href="/assets/js/41.1f086cc5.js"><link rel="prefetch" href="/assets/js/42.bf3ad2c6.js"><link rel="prefetch" href="/assets/js/43.16c54e3d.js"><link rel="prefetch" href="/assets/js/44.33a449ad.js"><link rel="prefetch" href="/assets/js/45.640d491e.js"><link rel="prefetch" href="/assets/js/46.bfd0c1dc.js"><link rel="prefetch" href="/assets/js/47.1657721e.js"><link rel="prefetch" href="/assets/js/48.bdde6d65.js"><link rel="prefetch" href="/assets/js/5.aaf9222d.js"><link rel="prefetch" href="/assets/js/6.77bf1753.js"><link rel="prefetch" href="/assets/js/7.77cf701d.js"><link rel="prefetch" href="/assets/js/8.254f569f.js"><link rel="prefetch" href="/assets/js/9.b33c928a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2cc3792c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/images/logo.png" alt="yilyn" class="logo"> <span class="site-name can-hide">yilyn</span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JAVA基础" class="dropdown-title"><span class="title">JAVA基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="JAVA基础" class="mobile-dropdown-title"><span class="title">JAVA基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java_basics/collections/" class="nav-link">
+  集合类
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/multi_threads/" class="nav-link">
+  多线程
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/JUC/" class="nav-link">
+  JUC
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/jvm/" class="nav-link">
+  JVM
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/algorithm/" class="nav-link router-link-active">
+  算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件" class="dropdown-title"><span class="title">中间件</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件" class="mobile-dropdown-title"><span class="title">中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/middleware/kafka/" class="nav-link">
+  Kafka
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="网络" class="dropdown-title"><span class="title">网络</span> <span class="arrow down"></span></button> <button type="button" aria-label="网络" class="mobile-dropdown-title"><span class="title">网络</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/network/netty/" class="nav-link">
+  netty
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/big_data/flink-cdc/" class="nav-link">
+  Flink CDC
+</a></li><li class="dropdown-item"><!----> <a href="/big_data/hadoop/" class="nav-link">
+  Hadoop
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/databases/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/databases/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="环境搭建" class="dropdown-title"><span class="title">环境搭建</span> <span class="arrow down"></span></button> <button type="button" aria-label="环境搭建" class="mobile-dropdown-title"><span class="title">环境搭建</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/env_build/blog_vuepress/" class="nav-link">
+  博客by-vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/env_build/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/env_build/linux/" class="nav-link">
+  linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="记录" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="记录" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/take_notes/interview/" class="nav-link">
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/take_notes/essay/" class="nav-link">
+  优秀文章
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JAVA基础" class="dropdown-title"><span class="title">JAVA基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="JAVA基础" class="mobile-dropdown-title"><span class="title">JAVA基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java_basics/collections/" class="nav-link">
+  集合类
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/multi_threads/" class="nav-link">
+  多线程
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/JUC/" class="nav-link">
+  JUC
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/jvm/" class="nav-link">
+  JVM
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/algorithm/" class="nav-link router-link-active">
+  算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件" class="dropdown-title"><span class="title">中间件</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件" class="mobile-dropdown-title"><span class="title">中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/middleware/kafka/" class="nav-link">
+  Kafka
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="网络" class="dropdown-title"><span class="title">网络</span> <span class="arrow down"></span></button> <button type="button" aria-label="网络" class="mobile-dropdown-title"><span class="title">网络</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/network/netty/" class="nav-link">
+  netty
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/big_data/flink-cdc/" class="nav-link">
+  Flink CDC
+</a></li><li class="dropdown-item"><!----> <a href="/big_data/hadoop/" class="nav-link">
+  Hadoop
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/databases/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/databases/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="环境搭建" class="dropdown-title"><span class="title">环境搭建</span> <span class="arrow down"></span></button> <button type="button" aria-label="环境搭建" class="mobile-dropdown-title"><span class="title">环境搭建</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/env_build/blog_vuepress/" class="nav-link">
+  博客by-vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/env_build/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/env_build/linux/" class="nav-link">
+  linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="记录" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="记录" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/take_notes/interview/" class="nav-link">
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/take_notes/essay/" class="nav-link">
+  优秀文章
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Java基础</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/java_basics/collections/" class="sidebar-heading clickable"><span>集合</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/java_basics/JUC/" class="sidebar-heading clickable"><span>JUC</span> <span class="arrow right"></span></a> <!----></section></li><li><a href="/java_basics/jvm/" class="sidebar-link">JVM</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/java_basics/multi_threads/" class="sidebar-heading clickable"><span>多线程</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/java_basics/algorithm/" class="sidebar-heading clickable router-link-active open"><span>算法</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/java_basics/algorithm/排序:快速排序.html" class="active sidebar-link">快速排序</a></li></ul></section></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="快速排序"><a href="#快速排序" class="header-anchor">#</a> 快速排序</h1> <p>快速排序（Quick sort）是对冒泡排序的一种改进，是基于分治思想提供的算法。</p> <h2 id="算法思路"><a href="#算法思路" class="header-anchor">#</a> 算法思路</h2> <ul><li>首先定义一个基准点，目标就是将小于基准值的元素移动到左边，大于基准值的元素移动到右边（注意：基准值也要参与比较和交换）</li> <li>不断的对基准点进行比较和替换，每一次循环最多交换一次位置</li> <li>在比较过程中，移动指针满足一个要求，右指针的值大于基准值，左指针的值小于基准值</li></ul> <p>给定一个数组：</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol><li>第一次对数组整体比较
+如下图，首先定义基准点(图中红色)，一般是取第1位为基准点，因为基准值是左指针第一位，所以先比较右指针，当右指针小于基准值时，停止右指针移动，开始比较左指针，
+直到左指针的元素比基准值大，此时将左右指针所在位置的元素进行替换，重复此操作，直到左右指针重合</li></ol> <p><img src="/images/java_basics/algorithm/quick_sort/quick_sort_compare_swap.png" alt="初始化"></p> <p>这样就完成了整个数组的交换过程，基准值位置左边的数组元素都小于基准值，右边数组的元素都大于基准值，接下来继续按此方法，递归的对左右两边的数组重复比较，直到指针重合才结束。</p> <ol start="2"><li>取左边数组，重复第一步方法</li></ol> <p><img src="/images/java_basics/algorithm/quick_sort/quick_sort_left_arr.png" alt="初始化"></p> <p>这是左边数组排序完毕：2,3,4  整体数组为：{2,3,4,5,6,7}</p> <ol start="3"><li>取右边数组，重复第一步方法</li></ol> <p><img src="/images/java_basics/algorithm/quick_sort/quick_sort_right_arr.png" alt="初始化"></p> <p>右边的数组只要循环一次，i和j就重合了。</p> <p>最终得到数组结果为<code>{2,3,4,5,6,7}</code></p> <h2 id="java实现"><a href="#java实现" class="header-anchor">#</a> java实现</h2> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">quickSort</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr<span class="token punctuation">,</span> <span class="token keyword">int</span> left<span class="token punctuation">,</span> <span class="token keyword">int</span> right<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>left <span class="token operator">&gt;=</span> right<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">//case base</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">int</span> tmp <span class="token operator">=</span> arr<span class="token punctuation">[</span>left<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">//基准值</span>
+    <span class="token keyword">int</span> i <span class="token operator">=</span> left<span class="token punctuation">,</span> j <span class="token operator">=</span> right<span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> j<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&gt;=</span> tmp <span class="token operator">&amp;&amp;</span> i <span class="token operator">&lt;</span> j<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">//右指针大于等于基准值，则这个位置不用交换，继续比较前一个位置</span>
+            j<span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> tmp <span class="token operator">&amp;&amp;</span> i <span class="token operator">&lt;</span> j<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//左指针小于等于基准值，则这个位置不用交换，继续比较后一个位置</span>
+            i<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">!=</span> j<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">//i和j指针不重合时，交换i和j位置的值即可</span>
+            <span class="token keyword">int</span> t <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> t<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    arr<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">//此时i和j的位置重合，将基准值和当前位置替换</span>
+    arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> tmp<span class="token punctuation">;</span>
+    <span class="token function">quickSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> left<span class="token punctuation">,</span> i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//左边数组排序</span>
+    <span class="token function">quickSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> right<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//右边数组排序</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/java_basics/multi_threads/ThreadLocal.html" class="prev">
+        ThreadLocal
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.550bb993.js" defer></script><script src="/assets/js/2.90409a71.js" defer></script><script src="/assets/js/30.2084e635.js" defer></script>
+  </body>
+</html>

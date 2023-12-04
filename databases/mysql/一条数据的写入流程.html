@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>一条数据是如何写入的 | yilyn</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/images/logo.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.2cc3792c.css" as="style"><link rel="preload" href="/assets/js/app.550bb993.js" as="script"><link rel="preload" href="/assets/js/2.90409a71.js" as="script"><link rel="preload" href="/assets/js/14.2e6aae74.js" as="script"><link rel="prefetch" href="/assets/js/10.6a1a6c22.js"><link rel="prefetch" href="/assets/js/11.e1beb506.js"><link rel="prefetch" href="/assets/js/12.345d4694.js"><link rel="prefetch" href="/assets/js/13.aa99c9b1.js"><link rel="prefetch" href="/assets/js/15.e60da1cd.js"><link rel="prefetch" href="/assets/js/16.4c8c8826.js"><link rel="prefetch" href="/assets/js/17.0a5ea4b2.js"><link rel="prefetch" href="/assets/js/18.4ef3ca88.js"><link rel="prefetch" href="/assets/js/19.ed5b67c2.js"><link rel="prefetch" href="/assets/js/20.64d80033.js"><link rel="prefetch" href="/assets/js/21.e2d4fbf9.js"><link rel="prefetch" href="/assets/js/22.2e95842d.js"><link rel="prefetch" href="/assets/js/23.14aca209.js"><link rel="prefetch" href="/assets/js/24.43ca896f.js"><link rel="prefetch" href="/assets/js/25.c4535bf6.js"><link rel="prefetch" href="/assets/js/26.c8e8879b.js"><link rel="prefetch" href="/assets/js/27.03c9845f.js"><link rel="prefetch" href="/assets/js/28.88dcb212.js"><link rel="prefetch" href="/assets/js/29.863d604c.js"><link rel="prefetch" href="/assets/js/3.94daacd8.js"><link rel="prefetch" href="/assets/js/30.2084e635.js"><link rel="prefetch" href="/assets/js/31.2ab7f713.js"><link rel="prefetch" href="/assets/js/32.a27dfddd.js"><link rel="prefetch" href="/assets/js/33.c6549401.js"><link rel="prefetch" href="/assets/js/34.06a65af4.js"><link rel="prefetch" href="/assets/js/35.72e623d6.js"><link rel="prefetch" href="/assets/js/36.a7297bce.js"><link rel="prefetch" href="/assets/js/37.9737dca1.js"><link rel="prefetch" href="/assets/js/38.82978130.js"><link rel="prefetch" href="/assets/js/39.fd78df27.js"><link rel="prefetch" href="/assets/js/4.928945bf.js"><link rel="prefetch" href="/assets/js/40.61a1a6ab.js"><link rel="prefetch" href="/assets/js/41.1f086cc5.js"><link rel="prefetch" href="/assets/js/42.bf3ad2c6.js"><link rel="prefetch" href="/assets/js/43.16c54e3d.js"><link rel="prefetch" href="/assets/js/44.33a449ad.js"><link rel="prefetch" href="/assets/js/45.640d491e.js"><link rel="prefetch" href="/assets/js/46.bfd0c1dc.js"><link rel="prefetch" href="/assets/js/47.1657721e.js"><link rel="prefetch" href="/assets/js/48.bdde6d65.js"><link rel="prefetch" href="/assets/js/5.aaf9222d.js"><link rel="prefetch" href="/assets/js/6.77bf1753.js"><link rel="prefetch" href="/assets/js/7.77cf701d.js"><link rel="prefetch" href="/assets/js/8.254f569f.js"><link rel="prefetch" href="/assets/js/9.b33c928a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2cc3792c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/images/logo.png" alt="yilyn" class="logo"> <span class="site-name can-hide">yilyn</span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JAVA基础" class="dropdown-title"><span class="title">JAVA基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="JAVA基础" class="mobile-dropdown-title"><span class="title">JAVA基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java_basics/collections/" class="nav-link">
+  集合类
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/multi_threads/" class="nav-link">
+  多线程
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/JUC/" class="nav-link">
+  JUC
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/jvm/" class="nav-link">
+  JVM
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/algorithm/" class="nav-link">
+  算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件" class="dropdown-title"><span class="title">中间件</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件" class="mobile-dropdown-title"><span class="title">中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/middleware/kafka/" class="nav-link">
+  Kafka
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="网络" class="dropdown-title"><span class="title">网络</span> <span class="arrow down"></span></button> <button type="button" aria-label="网络" class="mobile-dropdown-title"><span class="title">网络</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/network/netty/" class="nav-link">
+  netty
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/big_data/flink-cdc/" class="nav-link">
+  Flink CDC
+</a></li><li class="dropdown-item"><!----> <a href="/big_data/hadoop/" class="nav-link">
+  Hadoop
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/databases/mysql/" class="nav-link router-link-active">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/databases/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="环境搭建" class="dropdown-title"><span class="title">环境搭建</span> <span class="arrow down"></span></button> <button type="button" aria-label="环境搭建" class="mobile-dropdown-title"><span class="title">环境搭建</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/env_build/blog_vuepress/" class="nav-link">
+  博客by-vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/env_build/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/env_build/linux/" class="nav-link">
+  linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="记录" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="记录" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/take_notes/interview/" class="nav-link">
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/take_notes/essay/" class="nav-link">
+  优秀文章
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JAVA基础" class="dropdown-title"><span class="title">JAVA基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="JAVA基础" class="mobile-dropdown-title"><span class="title">JAVA基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java_basics/collections/" class="nav-link">
+  集合类
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/multi_threads/" class="nav-link">
+  多线程
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/JUC/" class="nav-link">
+  JUC
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/jvm/" class="nav-link">
+  JVM
+</a></li><li class="dropdown-item"><!----> <a href="/java_basics/algorithm/" class="nav-link">
+  算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件" class="dropdown-title"><span class="title">中间件</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件" class="mobile-dropdown-title"><span class="title">中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/middleware/kafka/" class="nav-link">
+  Kafka
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="网络" class="dropdown-title"><span class="title">网络</span> <span class="arrow down"></span></button> <button type="button" aria-label="网络" class="mobile-dropdown-title"><span class="title">网络</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/network/netty/" class="nav-link">
+  netty
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/big_data/flink-cdc/" class="nav-link">
+  Flink CDC
+</a></li><li class="dropdown-item"><!----> <a href="/big_data/hadoop/" class="nav-link">
+  Hadoop
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/databases/mysql/" class="nav-link router-link-active">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/databases/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="环境搭建" class="dropdown-title"><span class="title">环境搭建</span> <span class="arrow down"></span></button> <button type="button" aria-label="环境搭建" class="mobile-dropdown-title"><span class="title">环境搭建</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/env_build/blog_vuepress/" class="nav-link">
+  博客by-vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/env_build/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/env_build/linux/" class="nav-link">
+  linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="记录" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="记录" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/take_notes/interview/" class="nav-link">
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/take_notes/essay/" class="nav-link">
+  优秀文章
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>数据库</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/databases/mysql/" class="sidebar-heading clickable router-link-active open"><span>MySQL</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/databases/mysql/一条数据的写入流程.html" class="active sidebar-link">一条数据是如何写入的</a></li><li><a href="/databases/mysql/隔离级别.html" class="sidebar-link">隔离级别</a></li></ul></section></li><li><a href="/databases/redis/" class="sidebar-link">Redis</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="一条数据是如何写入的"><a href="#一条数据是如何写入的" class="header-anchor">#</a> 一条数据是如何写入的</h1> <p>InnoDB作为使用最广的一款引擎，在众多引擎中对可靠性和高性能之间做了平衡，在事物控制、读写效率、并发、索引搜索等方面都有不错的表现。</p> <p>InnoDB作为存储引擎，通过执行器对内存和磁盘中的数据进行写入和读取，本章主要看一下数据写入的过程。</p> <h2 id="数据写入流程"><a href="#数据写入流程" class="header-anchor">#</a> 数据写入流程</h2> <p><img src="/images/databases/%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5%E6%B5%81%E7%A8%8B.png" alt="数据写入流程"></p> <ol><li>通过MySQL Server层的SQL接口和SQL解析器，将SQL解析为MySQL能够识别的语句，生成一个解析树；</li> <li>然后SQL优化器会对这个SQL语句进行优化，生成执行计划，通过执行器传给InnoDB引擎；</li> <li>开始执行后，首先为了让写入数据支持回滚操作，需要把旧的值记录到undo log文件中；</li> <li>因为MySQL最终的数据都是存在磁盘中，但是每次写入如果都需要写入磁盘的话，效率就太低了，所以InnoDB将所有的写入请求都写到内存中的Buffer Pool中；</li> <li>InnoDB 会有单独的IO线程将 Buffer Pool 中的数据读取出来，然后写入磁盘，这个写入磁盘的过程是通过操作系统的open+write函数写入磁盘的 .idb 文件；</li> <li>如果刚写入Buffer Pool，MySQL服务宕机了，那么刚写入Buffer Pool的数据就丢了，如何解决这个问题，此时Redo Log就派上用场了</li> <li>当数据写入Buffer Pool完成之后，在InnoDB引擎中将本次的数据请求写入Redo Log Buffer，再由Redo Log Buffer刷入磁盘文件中。</li> <li>当Redo Log写入的同时，会进行Bin Log刷盘操作，刷盘成功后，告知Redo Log 事物已提交，并在Redo Log中打入commit标记，代表整个数据事物完成。</li></ol> <h2 id="redo-log"><a href="#redo-log" class="header-anchor">#</a> Redo Log</h2> <p>Redo Log是InnoDB存储引擎特有的日志机制，借助内存的Redo Log Buffer和操作系统的Page Cache进行Redo Log的刷盘操作。</p> <h3 id="刷盘策略"><a href="#刷盘策略" class="header-anchor">#</a> 刷盘策略</h3> <div class="language-SQL line-numbers-mode"><pre class="language-sql"><code><span class="token comment">-- 查看刷盘策略</span>
+<span class="token keyword">show</span> variables <span class="token operator">like</span> <span class="token string">'innodb_flush_log_at_trx_commit'</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>InnoDB的Redo Log刷盘策略有3种，代表了将Redo Log Buffer内存中的数据刷入磁盘的频率</p> <ol><li><strong>innodb_flush_log_at_trx_commit=0</strong>：每次提交事务都不刷盘，而是由一个后台线程每隔1s进行1次数据写入Page Cache和刷盘操作，这种策略仍然有数据丢失的风险</li> <li><strong>innodb_flush_log_at_trx_commit=1</strong>：是默认的刷盘策略，每次提交事务都将本次记录在Redo Log Buffer中的数据写入操作系统的Page Cache中，并立刻进行刷盘操作，这种方式可以保证数据一致性。</li> <li><strong>innodb_flush_log_at_trx_commit=2</strong>：每次事务提交之后都把数据从Redo Log Buffer写入操作系统的Page Cache中，由操作系统决定什么时候写入磁盘。如果出现断电或者整个服务器宕机，也会有数据丢失的问题。</li></ol> <h2 id="bin-log"><a href="#bin-log" class="header-anchor">#</a> Bin Log</h2> <p>变更历史查询、数据恢复和备份、主从复制</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/databases/mysql/隔离级别.html">
+        隔离级别
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.550bb993.js" defer></script><script src="/assets/js/2.90409a71.js" defer></script><script src="/assets/js/14.2e6aae74.js" defer></script>
+  </body>
+</html>
